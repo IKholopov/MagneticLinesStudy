@@ -55,12 +55,6 @@ begin
     Parent := Self;
   end;
 
-  EditRadius := TEdit.Create(Self);
-  with EditRadius do begin
-    Name := '';
-    Parent := Self;
-    SetBounds(220,0,80,25);
-  end;
 
   FormResize(Self);
 

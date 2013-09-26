@@ -8,21 +8,19 @@ uses
   Classes, SysUtils;
 
 type
-  TWireConfigs = class(TForm)
+  TWireConfigs = class(TObject)
 
   private
-    GLAreaInitialized: boolean;
+
   public
-    constructor Create(TheOwner: TComponent); override;
-    //destructor Destroy; override;
+
   end;
 
 var
-  Form1: TMainForm;
+  Config: TWireConfigs;
 
 implementation
 
-{$R *.lfm}
+
 
 end.
-
