@@ -1,0 +1,4 @@
+MagneticLinesStudy
+==================
+
+Study project
