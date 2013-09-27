@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LCLProc, Forms, LResources, Buttons,
-  StdCtrls, ExtCtrls, Dialogs, Graphics, IntfGraphics, GL, FPimage, OpenGLContext;
+  StdCtrls, ExtCtrls, Dialogs, Graphics, IntfGraphics, GL, FPimage, OpenGLContext,
+  WireConfigs;
 
 type
   TMainForm = class(TForm)
@@ -15,6 +16,7 @@ type
     EditI: TEdit;   //Сила тока
     ConfigsComboBox: TComboBox;
     Button1: TButton;
+    Config: TWireConfig;
 
     procedure FormResize(Sender: TObject);
     procedure OpenGLControllerPaint(Sender: TObject);
@@ -46,6 +48,12 @@ begin
   Names.Add('Parallel');
   Names.Add('Perpendicular');
   Names.Add('Wire and coil');
+
+  Config := ThreeRingsConfig.Create;
+  with Config do begin
+    Load(Form1);
+    Calculate();
+  end;
 
   ConfigsComboBox := TComboBox.Create(Self); //A selection of different configs
   with ConfigsComboBox do begin

@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -52,6 +52,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="wireConfigs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WireConfigs"/>
+      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
