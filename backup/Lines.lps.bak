@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="39" Y="10"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -23,23 +23,23 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="37"/>
-        <CursorPos X="20" Y="63"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="57"/>
+        <CursorPos X="26" Y="102"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="wireConfigs.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireConfigs"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="21"/>
-        <CursorPos X="22" Y="51"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="7"/>
+        <CursorPos X="3" Y="48"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -49,7 +49,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1451"/>
         <CursorPos X="3" Y="1465"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="16"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -59,7 +59,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="228"/>
         <CursorPos X="30" Y="272"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="13"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -67,14 +67,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1943"/>
         <CursorPos X="27" Y="1966"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit5>
       <Unit6>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="3153"/>
         <CursorPos X="1" Y="3171"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit6>
       <Unit7>
         <Filename Value="C:\lazarus\lcl\lclproc.pas"/>
@@ -91,7 +91,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="990"/>
         <CursorPos X="3" Y="1016"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>

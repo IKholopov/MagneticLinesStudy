@@ -15,6 +15,8 @@ type
         procedure Load(Form: TForm); virtual;
         function Calculate():boolean; virtual;
   end;
+
+  {ThreeRingsConfig}
   ThreeRingsConfig = class(TWireConfig)
           RadiusLabel:TLabel;
           EditRadius: TEdit;
