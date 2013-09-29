@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="39" Y="10"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -25,9 +25,9 @@
         <UnitName Value="MainForm"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="58"/>
-        <CursorPos X="22" Y="102"/>
-        <UsageCount Value="33"/>
+        <TopLine Value="109"/>
+        <CursorPos X="20" Y="102"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -38,8 +38,8 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="39" Y="25"/>
-        <UsageCount Value="29"/>
+        <CursorPos X="38" Y="17"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -49,7 +49,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1451"/>
         <CursorPos X="3" Y="1465"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="17"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -59,7 +59,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="228"/>
         <CursorPos X="30" Y="272"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="14"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -91,7 +91,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="990"/>
         <CursorPos X="3" Y="1016"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="15"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>

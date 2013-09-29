@@ -19,7 +19,7 @@ type
     YCordEdit: TEdit;
     ZLabel: TLabel;
     ZCordEdit: TEdit;
-    Calculate: TButton;
+    CalculateButton: TButton;
     Config: TWireConfig;
 
     procedure FormResize(Sender: TObject);
@@ -73,20 +73,20 @@ begin
   XLabel := TLabel.Create(Self);
   with XLabel do begin
      Caption := 'X:';
-     SetBounds(10,350, 20, 40);
+     SetBounds(10,355, 20, 40);
      Parent := Self;
   end;
   XCordEdit := TEdit.Create(Self);
   with XCordEdit do
   begin
-    SetBounds(20, 352, 100, 40);
+    SetBounds(20, 350, 100, 40);
     Parent := Self;
   end;
 
   YLabel := TLabel.Create(Self);
   with YLabel do begin
      Caption := 'Y:';
-     SetBounds(10,382, 20, 40);
+     SetBounds(10,385, 20, 40);
      Parent := Self;
   end;
   YCordEdit := TEdit.Create(Self);
@@ -99,13 +99,19 @@ begin
   ZLabel := TLabel.Create(Self);
   with ZLabel do begin
      Caption := 'Z:';
-     SetBounds(10,412, 20, 40);
+     SetBounds(10,415, 20, 40);
      Parent := Self;
   end;
   ZCordEdit := TEdit.Create(Self);
   with ZCordEdit do
   begin
     SetBounds(20, 410, 100, 40);
+    Parent := Self;
+  end;
+
+  CalculateButton := TButton.Create(Self);
+  with CalculateButton do begin
+    SetBounds(20, 450, 80, 30);
     Parent := Self;
   end;
 

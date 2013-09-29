@@ -14,6 +14,7 @@ type
   public
         procedure Load(Form: TForm); virtual;
         function Calculate():boolean; virtual;
+        procedure DrawWire(); virtual;
   end;
 
   {ThreeRingsConfig}
@@ -28,6 +29,7 @@ type
   public
          procedure Load(Form: TForm); override;
          function Calculate(): boolean; override;
+         procedure DrawWire(); override;
   end;
 
 implementation
@@ -42,6 +44,11 @@ end;
 function TWireConfig.Calculate(): boolean;
 begin
   raise exception.Create('Absract class TWireConfig doesnt implement Calculate()');
+end;
+
+procedure  TWireConfig.DrawWire();
+begin
+  raise exception.Create('Absract class TWireConfig doesnt implement DrawWire()');
 end;
 
      {ThreeRingsConfig}
@@ -77,6 +84,11 @@ end;
 function ThreeRingsConfig.Calculate(): boolean;
 begin
   Result := true;
+end;
+
+procedure  ThreeRingsConfig.DrawWire();
+begin
+
 end;
 
 end.
