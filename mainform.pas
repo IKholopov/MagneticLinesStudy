@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, LCLProc, Forms, LResources, Buttons,
   StdCtrls, ExtCtrls, Dialogs, Graphics, IntfGraphics, GL, FPimage, OpenGLContext,
-  WireConfigs;
+  WireConfigs, Cameras;
 
 type
   TMainForm = class(TForm)
@@ -21,10 +21,12 @@ type
     ZCordEdit: TEdit;
     CalculateButton: TButton;
     Config: TWireConfig;
+    Camera1: Camera;
 
     procedure FormResize(Sender: TObject);
     procedure OpenGLControllerPaint(Sender: TObject);
     procedure OpenGLControllerResize(Sender: TObject);
+    procedure IdleFunc(Sender: TObject; var Done: Boolean);
 
   private
     GLAreaInitialized: boolean;
@@ -44,9 +46,11 @@ var
   Names: TStringList;
 begin
   inherited CreateNew(TheOwner);
-
+  Application.OnIdle := @IdleFunc;
   SetBounds((Screen.Width - 800) div 2, (Screen.Height - 600) div 2, 800, 600);
   OnResize := @FormResize;
+
+  Camera1 := Camera.Create();
 
   Names := TStringList.Create; //Setting Configuraion names
   Names.Add('3 Rings');
@@ -71,10 +75,11 @@ begin
   end;
 
   XLabel := TLabel.Create(Self);
-  with XLabel do begin
-     Caption := 'X:';
-     SetBounds(10,355, 20, 40);
-     Parent := Self;
+  with XLabel do
+  begin
+    Caption := 'X:';
+    SetBounds(10, 355, 20, 40);
+    Parent := Self;
   end;
   XCordEdit := TEdit.Create(Self);
   with XCordEdit do
@@ -84,10 +89,11 @@ begin
   end;
 
   YLabel := TLabel.Create(Self);
-  with YLabel do begin
-     Caption := 'Y:';
-     SetBounds(10,385, 20, 40);
-     Parent := Self;
+  with YLabel do
+  begin
+    Caption := 'Y:';
+    SetBounds(10, 385, 20, 40);
+    Parent := Self;
   end;
   YCordEdit := TEdit.Create(Self);
   with YCordEdit do
@@ -97,10 +103,11 @@ begin
   end;
 
   ZLabel := TLabel.Create(Self);
-  with ZLabel do begin
-     Caption := 'Z:';
-     SetBounds(10,415, 20, 40);
-     Parent := Self;
+  with ZLabel do
+  begin
+    Caption := 'Z:';
+    SetBounds(10, 415, 20, 40);
+    Parent := Self;
   end;
   ZCordEdit := TEdit.Create(Self);
   with ZCordEdit do
@@ -110,7 +117,8 @@ begin
   end;
 
   CalculateButton := TButton.Create(Self);
-  with CalculateButton do begin
+  with CalculateButton do
+  begin
     Caption := 'Calculate';
     SetBounds(20, 450, 80, 30);
     Parent := Self;
@@ -151,9 +159,14 @@ begin
       GLAreaInitialized := True;
     end;
 
+    glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT);
-    glLoadIdentity();
-    glTranslatef(0.0, 0.0, -3.0);
+    glLoadIdentity;
+    glTranslatef(0, 0, -2*Pi);
+    glPushMatrix;
+    Camera1.Update();
+    Config.DrawWire();
+    glPushMatrix;
     OpenGLController.SwapBuffers;
   end;
 end;
@@ -162,6 +175,12 @@ procedure TMainForm.OpenGLControllerResize(Sender: TObject);
 begin
   if (GLAreaInitialized) and OpenGLController.MakeCurrent then
     glViewport(0, 0, OpenGLController.Width, OpenGLController.Height);
+end;
+
+procedure TMainForm.IdleFunc(Sender: TObject; var Done: Boolean);
+begin
+  OpenGLController.Invalidate;
+  Done:=false;
 end;
 
 end.

@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -57,6 +57,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireConfigs"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="cameras.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Cameras"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

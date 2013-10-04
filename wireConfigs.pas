@@ -5,7 +5,7 @@ unit WireConfigs;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, Forms;
+  Classes, SysUtils, StdCtrls, Forms, GL;
  {$M+}
 type
   TWireConfig = class(TObject)
@@ -87,8 +87,39 @@ begin
 end;
 
 procedure  ThreeRingsConfig.DrawWire();
+const Pi2 = 2 * Pi;
+var i ,j, k, n, numc, numt, offset: integer;
+  s, t, x, y, z: double;
+  torus: GLuint;
 begin
+    torus := glGenLists(1);
+    numc := 2;
+    numt := 100;
+    offset := -1;
+    glNewList(torus, GL_COMPILE);
+    for n := 0 to 2 do begin
+       for i := 0 to numc - 1 do begin
+             glBegin(GL_QUAD_STRIP);
+              for j := 0 to numt do begin
+                      for k := 1 downto 0 do begin
+                      s := (i + k) mod numc + 0.5;
+                      t := j mod numt;
+                      x := (1 + 0.1*cos(s * Pi2/numc))*cos(t*Pi2/numt);
+                      y := (1 + 0.1*cos(s * Pi2/numc))*sin(t*Pi2/numt);
+                      z := offset*2 + 0.1*sin(s * Pi2/numc);
+                      glColor3f(0, 0, 1);
+                      glVertex3f(x, y, z);
+                      end;
+              end;
+              glEnd;
+       end;
+       offset := offset + 1;
+    end;
+    glEndList();
 
+    glCallList(torus);
+
+//    glClearColor(0.942,0.942,0.942,1.0);
 end;
 
 end.
