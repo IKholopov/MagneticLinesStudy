@@ -159,7 +159,7 @@ begin
       GLAreaInitialized := True;
     end;
 
-    glClearColor(0.0, 0.0, 0.0, 1.0);
+    glClearColor(0.942,0.942,0.942,1.0);
     glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT);
     glLoadIdentity;
     glTranslatef(0, 0, -2*Pi);

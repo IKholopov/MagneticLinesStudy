@@ -26,8 +26,8 @@ end;
 
 procedure Camera.Update();
 begin
-  IsKeyPressed(VK_LEFT);
-  Rotation := Rotation + 0.01;
+  //IsKeyPressed(VK_LEFT);
+  Rotation := Rotation + 0.3;
   glRotatef(Rotation, 0, 1, 0);
 end;
 
