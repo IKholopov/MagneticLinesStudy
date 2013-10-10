@@ -88,13 +88,13 @@ end;
 
 procedure  ThreeRingsConfig.DrawWire();
 const Pi2 = 2 * Pi;
-var i ,j, k, n, numc, numt offset: integer;
+var i ,j, k, n, numc, numt, offset: integer;
   s, t, x, y, z: double;
   torus: GLuint;
 begin
     torus := glGenLists(1);
     numc := 2;
-    numt := 100;
+    numt := 50;
     offset := -1;
     glNewList(torus, GL_COMPILE);
     for n := 0 to 2 do begin
@@ -107,7 +107,7 @@ begin
                       x := (1 + 0.1*cos(s * Pi2/numc))*cos(t*Pi2/numt);
                       y := (1 + 0.1*cos(s * Pi2/numc))*sin(t*Pi2/numt);
                       z := offset*2 + 0.1*sin(s * Pi2/numc);
-                      glColor3f(0, 0, 1);
+                      glColor3f(0, 0.5, 1);
                       glVertex3f(x, y, z);
                       end;
               end;
@@ -123,3 +123,4 @@ begin
 end;
 
 end.
+

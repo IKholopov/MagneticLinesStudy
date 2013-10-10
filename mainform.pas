@@ -5,7 +5,7 @@ unit MainForm;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LCLProc, Forms, LResources, Buttons,
+  Classes, SysUtils, FileUtil, LCLProc, LCLType, Forms, LResources, Buttons,
   StdCtrls, ExtCtrls, Dialogs, Graphics, IntfGraphics, GL, FPimage, OpenGLContext,
   WireConfigs, Cameras;
 
@@ -26,6 +26,7 @@ type
     procedure FormResize(Sender: TObject);
     procedure OpenGLControllerPaint(Sender: TObject);
     procedure OpenGLControllerResize(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure IdleFunc(Sender: TObject; var Done: Boolean);
 
   private
@@ -45,8 +46,11 @@ constructor TMainForm.Create(TheOwner: TComponent);
 var
   Names: TStringList;
 begin
+
   inherited CreateNew(TheOwner);
   Application.OnIdle := @IdleFunc;
+  Form1.KeyPreview:=true;
+  Form1.OnKeyDown:=@FormKeyDown;
   SetBounds((Screen.Width - 800) div 2, (Screen.Height - 600) div 2, 800, 600);
   OnResize := @FormResize;
 
@@ -175,6 +179,19 @@ procedure TMainForm.OpenGLControllerResize(Sender: TObject);
 begin
   if (GLAreaInitialized) and OpenGLController.MakeCurrent then
     glViewport(0, 0, OpenGLController.Width, OpenGLController.Height);
+end;
+
+procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+  );
+begin
+    if Key =  VK_RIGHT then
+      Camera1.Rotate(0,-5,0);
+    if Key =  VK_LEFT then
+      Camera1.Rotate(0,5,0);
+    if Key =  VK_UP then
+      Camera1.Rotate(5,0,0);
+    if Key =  VK_DOWN then
+      Camera1.Rotate(-5,0,0);
 end;
 
 procedure TMainForm.IdleFunc(Sender: TObject; var Done: Boolean);
