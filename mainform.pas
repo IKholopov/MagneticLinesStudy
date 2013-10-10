@@ -26,6 +26,7 @@ type
     procedure FormResize(Sender: TObject);
     procedure OpenGLControllerPaint(Sender: TObject);
     procedure OpenGLControllerResize(Sender: TObject);
+    procedure DrawCoords();
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure IdleFunc(Sender: TObject; var Done: Boolean);
 
@@ -51,7 +52,8 @@ begin
   Application.OnIdle := @IdleFunc;
   Form1.KeyPreview:=true;
   Form1.OnKeyDown:=@FormKeyDown;
-  SetBounds((Screen.Width - 800) div 2, (Screen.Height - 600) div 2, 800, 600);
+  //SetBounds((Screen.Width - 800) div 2, (Screen.Height - 600) div 2, 800, 600);
+  SetBounds((Screen.Width - 1280) div 2, (Screen.Height - 720) div 2, 1280, 720);
   OnResize := @FormResize;
 
   Camera1 := Camera.Create();
@@ -169,10 +171,48 @@ begin
     glTranslatef(0, 0, -2*Pi);
     glPushMatrix;
     Camera1.Update();
+    DrawCoords();
     Config.DrawWire();
     glPushMatrix;
     OpenGLController.SwapBuffers;
   end;
+end;
+
+procedure TMainForm.DrawCoords();
+begin
+  glBegin(GL_LINES);
+    //Z
+    glColor3f(1,0.4,0 );
+    glVertex3f(0, 0, -50);
+    glVertex3f(0, 0, 50);
+    glVertex3f(0, 0.1, 3);
+    glVertex3f(0, 0, 3.5);
+    glVertex3f(0, -0.1, 3);
+    glVertex3f(0, 0, 3.5);
+
+    glVertex3f(0, 0.3, 3.2);
+    glVertex3f(0, 0.3, 3.3);
+    glVertex3f(0, 0.3, 3.3);
+    glVertex3f(0, 0.2, 3.2);
+    glVertex3f(0, 0.2, 3.2);
+    glVertex3f(0, 0.2, 3.3);
+
+    //Y
+    glColor3f(1,0.4,0 );
+    glVertex3f(0, -50, 0);
+    glVertex3f(0, 50, 0);
+    glVertex3f(0, 3, 0.1);
+    glVertex3f(0, 3.5, 0);
+    glVertex3f(0, 3, -0.1);
+    glVertex3f(0, 3.5, 0);
+
+    glVertex3f(0, 3.8, -0.5);
+    glVertex3f(0, 3.6, -0.4);
+    glVertex3f(0, 3.6, -0.4);
+    glVertex3f(0, 3.8, -0.3);
+    glVertex3f(0, 3.6, -0.4);
+    glVertex3f(0, 3.4, -0.4);
+   glEnd;
 end;
 
 procedure TMainForm.OpenGLControllerResize(Sender: TObject);

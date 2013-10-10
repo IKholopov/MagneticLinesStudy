@@ -107,7 +107,7 @@ begin
                       x := (1 + 0.1*cos(s * Pi2/numc))*cos(t*Pi2/numt);
                       y := (1 + 0.1*cos(s * Pi2/numc))*sin(t*Pi2/numt);
                       z := offset*2 + 0.1*sin(s * Pi2/numc);
-                      glColor3f(0, 0.25, 1);
+                      glColor3f(0.4, 0.25, 0.25);
                       glVertex3f(x, y, z);
                       end;
               end;
@@ -118,8 +118,6 @@ begin
     glEndList();
 
     glCallList(torus);
-
-//    glClearColor(0.942,0.942,0.942,1.0);
 end;
 
 end.
