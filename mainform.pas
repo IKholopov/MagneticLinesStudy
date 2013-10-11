@@ -162,6 +162,7 @@ begin
       glFrustum(-1.0, 1.0, -1.0, 1.0, 1.5, 20.0);
       glMatrixMode(GL_MODELVIEW);
       glViewport(0, 0, OpenGLController.Width, OpenGLController.Height);
+      glEnable(GL_DEPTH_TEST);
       GLAreaInitialized := True;
     end;
 
