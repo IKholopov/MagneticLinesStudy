@@ -159,7 +159,7 @@ begin
     begin
       glMatrixMode(GL_PROJECTION);
       glLoadIdentity();
-      glFrustum(-1.0, 1.0, -1.0, 1.0, 1.5, 20.0);
+      glFrustum(-1.0, 1.0, -1.0, 1.0, 1, 100.0);
       glMatrixMode(GL_MODELVIEW);
       glViewport(0, 0, OpenGLController.Width, OpenGLController.Height);
       glEnable(GL_DEPTH_TEST);
@@ -183,7 +183,7 @@ procedure TMainForm.DrawCoords();
 begin
   glBegin(GL_LINES);
     //Z
-    glColor3f(1,0.4,0 );
+    glColor3f(0.4,0,0.4 );
     glVertex3f(0, 0, -50);
     glVertex3f(0, 0, 50);
     glVertex3f(0, 0.1, 3);
@@ -191,12 +191,12 @@ begin
     glVertex3f(0, -0.1, 3);
     glVertex3f(0, 0, 3.5);
 
-    glVertex3f(0, 0.3, 3.2);
+    {glVertex3f(0, 0.3, 3.2);
     glVertex3f(0, 0.3, 3.3);
     glVertex3f(0, 0.3, 3.3);
     glVertex3f(0, 0.2, 3.2);
     glVertex3f(0, 0.2, 3.2);
-    glVertex3f(0, 0.2, 3.3);
+    glVertex3f(0, 0.2, 3.3);}
 
     //Y
     glColor3f(1,0.4,0 );
@@ -207,12 +207,28 @@ begin
     glVertex3f(0, 3, -0.1);
     glVertex3f(0, 3.5, 0);
 
-    glVertex3f(0, 3.8, -0.5);
+    {glVertex3f(0, 3.8, -0.5);
     glVertex3f(0, 3.6, -0.4);
     glVertex3f(0, 3.6, -0.4);
     glVertex3f(0, 3.8, -0.3);
     glVertex3f(0, 3.6, -0.4);
-    glVertex3f(0, 3.4, -0.4);
+    glVertex3f(0, 3.4, -0.4);}
+
+    //X
+    glColor3f(0.4,0.4,0 );
+    glVertex3f(-50, 0, 0);
+    glVertex3f(50, 0, 0);
+    glVertex3f(3, 0.1, 0);
+    glVertex3f(3.5, 0, 0);
+    glVertex3f(3, -0.1, 0);
+    glVertex3f(3.5, 0, 0);
+
+    {glVertex3f(0, 3.8, -0.5);
+    glVertex3f(0, 3.6, -0.4);
+    glVertex3f(0, 3.6, -0.4);
+    glVertex3f(0, 3.8, -0.3);
+    glVertex3f(0, 3.6, -0.4);
+    glVertex3f(0, 3.4, -0.4);}
    glEnd;
 end;
 
@@ -230,9 +246,13 @@ begin
     if Key =  VK_LEFT then
       Camera1.Rotate(0,5,0);
     if Key =  VK_UP then
-      Camera1.Rotate(5,0,0);
+       if (ssShift in Shift) or (ssCtrl in Shift)then
+          Camera1.Scale(0.3)
+       else Camera1.Rotate(5,0,0);
     if Key =  VK_DOWN then
-      Camera1.Rotate(-5,0,0);
+    if (ssShift in Shift) or (ssCtrl in Shift) then
+          Camera1.Scale(-0.3)
+    else Camera1.Rotate(-5,0,0);
 end;
 
 procedure TMainForm.IdleFunc(Sender: TObject; var Done: Boolean);
