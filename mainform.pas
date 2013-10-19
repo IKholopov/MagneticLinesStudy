@@ -28,6 +28,7 @@ type
     procedure OpenGLControllerResize(Sender: TObject);
     procedure DrawCoords();
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure CalculateClick(Sender: TObject);
     procedure IdleFunc(Sender: TObject; var Done: Boolean);
 
   private
@@ -68,7 +69,6 @@ begin
   with Config do
   begin
     Load(Form1);
-    Calculate();
   end;
 
   ConfigsComboBox := TComboBox.Create(Self); //A selection of different configs
@@ -128,6 +128,7 @@ begin
     Caption := 'Calculate';
     SetBounds(20, 450, 80, 30);
     Parent := Self;
+    OnClick := @CalculateClick;
   end;
 
   FormResize(Self);
@@ -146,17 +147,21 @@ end;
 procedure TMainForm.FormResize(Sender: TObject);
 begin
   if OpenGLController <> nil then
-    OpenGLController.SetBounds(300, 30, Width - 330, Height - 40);
+    OpenGLController.SetBounds(300, 30, Width - 440, Height - 40);
   ConfigsComboBox.SetBounds(0, 0, 100, 25);
 end;
 
 //OpenGl
 procedure TMainForm.OpenGLControllerPaint(Sender: TObject);
+const lights: array[0..3] of GLfloat = (0.8, 0.8, 0.8, 1);
 begin
   if OpenGLController.MakeCurrent then
   begin
     if not GLAreaInitialized then
     begin
+      glEnable(GL_LIGHTING);
+      glLightfv(GL_LIGHT0, GL_POSITION, lights);
+      glEnable(GL_LIGHT0);
       glMatrixMode(GL_PROJECTION);
       glLoadIdentity();
       glFrustum(-1.0, 1.0, -1.0, 1.0, 1, 100.0);
@@ -168,6 +173,8 @@ begin
 
     glClearColor(0.942,0.942,0.942,1.0);
     glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_COLOR_MATERIAL);
+    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
     glLoadIdentity;
     glTranslatef(0, 0, -2*Pi);
     glPushMatrix;
@@ -238,6 +245,8 @@ begin
     glViewport(0, 0, OpenGLController.Width, OpenGLController.Height);
 end;
 
+//Forms methods
+
 procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
   );
 begin
@@ -255,10 +264,18 @@ begin
     else Camera1.Rotate(-5,0,0);
 end;
 
+procedure TMainForm.CalculateClick(Sender: TObject);
+begin
+      Config.Calculate(StrToFloat(XCordEdit.Text), StrToFloat(YCordEdit.Text), StrToFloat(ZCordEdit.Text));
+end;
+
 procedure TMainForm.IdleFunc(Sender: TObject; var Done: Boolean);
 begin
   OpenGLController.Invalidate;
   Done:=false;
 end;
+
+
+
 
 end.

@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="19">
+    <Units Count="20">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="19" Y="19"/>
-        <UsageCount Value="47"/>
+        <UsageCount Value="56"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -26,9 +26,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="178"/>
-        <CursorPos X="18" Y="186"/>
-        <UsageCount Value="47"/>
+        <TopLine Value="134"/>
+        <CursorPos X="51" Y="150"/>
+        <UsageCount Value="56"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -38,9 +38,9 @@
         <UnitName Value="WireConfigs"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="73"/>
-        <CursorPos X="25" Y="95"/>
-        <UsageCount Value="23"/>
+        <TopLine Value="40"/>
+        <CursorPos X="19" Y="71"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -50,16 +50,16 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="12"/>
-        <CursorPos X="29" Y="60"/>
-        <UsageCount Value="28"/>
+        <CursorPos X="19" Y="14"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
         <UnitName Value="StdCtrls"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1472"/>
-        <CursorPos X="18" Y="1542"/>
+        <TopLine Value="678"/>
+        <CursorPos X="5" Y="704"/>
         <UsageCount Value="19"/>
       </Unit4>
       <Unit5>
@@ -68,21 +68,21 @@
         <WindowIndex Value="0"/>
         <TopLine Value="734"/>
         <CursorPos X="24" Y="758"/>
-        <UsageCount Value="15"/>
+        <UsageCount Value="14"/>
       </Unit5>
       <Unit6>
         <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1943"/>
         <CursorPos X="27" Y="1966"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit6>
       <Unit7>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3153"/>
-        <CursorPos X="1" Y="3171"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="4663"/>
+        <CursorPos X="19" Y="4688"/>
+        <UsageCount Value="10"/>
       </Unit7>
       <Unit8>
         <Filename Value="C:\lazarus\lcl\lclproc.pas"/>
@@ -90,7 +90,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit8>
       <Unit9>
         <Filename Value="C:\lazarus\lcl\controls.pp"/>
@@ -98,14 +98,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="2091"/>
         <CursorPos X="15" Y="2116"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit9>
       <Unit10>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpash.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="167"/>
         <CursorPos X="22" Y="187"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit10>
       <Unit11>
         <Filename Value="C:\lazarus\components\opengl\openglcontext.pas"/>
@@ -113,7 +113,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="256"/>
         <CursorPos X="19" Y="179"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit11>
       <Unit12>
         <Filename Value="C:\lazarus\lcl\lcltype.pp"/>
@@ -121,14 +121,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="16" Y="164"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\keybrdh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="22"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit13>
       <Unit14>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\keyboard.pp"/>
@@ -136,21 +136,21 @@
         <WindowIndex Value="0"/>
         <TopLine Value="129"/>
         <CursorPos X="50" Y="170"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit14>
       <Unit15>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\wininc\struct.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="3947"/>
         <CursorPos X="19" Y="3973"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit15>
       <Unit16>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\opengl\src\gl.pp"/>
         <UnitName Value="GL"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1855"/>
-        <CursorPos X="13" Y="1899"/>
+        <TopLine Value="359"/>
+        <CursorPos X="3" Y="82"/>
         <UsageCount Value="10"/>
       </Unit16>
       <Unit17>
@@ -159,15 +159,22 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit17>
       <Unit18>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\classes\classesh.inc"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="77"/>
-        <CursorPos X="22" Y="103"/>
+        <TopLine Value="94"/>
+        <CursorPos X="3" Y="120"/>
         <UsageCount Value="10"/>
       </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysstrh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="150"/>
+        <CursorPos X="10" Y="176"/>
+        <UsageCount Value="10"/>
+      </Unit19>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
@@ -175,123 +182,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="mainform.pas"/>
-        <Caret Line="10" Column="3" TopLine="1"/>
+        <Caret Line="31" Column="15" TopLine="1"/>
       </Position1>
       <Position2>
-        <Filename Value="Lines.lpr"/>
-        <Caret Line="3" Column="11" TopLine="1"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="71" Column="17" TopLine="46"/>
       </Position2>
       <Position3>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="8" Column="40" TopLine="1"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="131" Column="32" TopLine="124"/>
       </Position3>
       <Position4>
         <Filename Value="mainform.pas"/>
-        <Caret Line="183" Column="1" TopLine="138"/>
+        <Caret Line="269" Column="92" TopLine="230"/>
       </Position4>
       <Position5>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="50" Column="32" TopLine="40"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="86" Column="3" TopLine="73"/>
       </Position5>
       <Position6>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="29" Column="31" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="12" Column="29" TopLine="1"/>
       </Position6>
       <Position7>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="30" Column="14" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="20" Column="34" TopLine="1"/>
       </Position7>
       <Position8>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="14" Column="7" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="35" Column="29" TopLine="9"/>
       </Position8>
       <Position9>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="31" Column="3" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="19" Column="24" TopLine="1"/>
       </Position9>
       <Position10>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="32" Column="14" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="95" Column="22" TopLine="49"/>
       </Position10>
       <Position11>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="37" Column="19" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="17" Column="9" TopLine="1"/>
       </Position11>
       <Position12>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="190" Column="24" TopLine="146"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="103" Column="26" TopLine="61"/>
       </Position12>
       <Position13>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="188" Column="27" TopLine="148"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="35" Column="10" TopLine="9"/>
       </Position13>
       <Position14>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="190" Column="28" TopLine="148"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="34" Column="2" TopLine="9"/>
       </Position14>
       <Position15>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="138" Column="18" TopLine="92"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="36" Column="27" TopLine="8"/>
       </Position15>
       <Position16>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="26" Column="25" TopLine="2"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="79" Column="19" TopLine="53"/>
       </Position16>
       <Position17>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="55" Column="26" TopLine="20"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="94" Column="20" TopLine="57"/>
       </Position17>
       <Position18>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="131" Column="13" TopLine="88"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="111" Column="1" TopLine="62"/>
       </Position18>
       <Position19>
         <Filename Value="wireconfigs.pas"/>
-        <Caret Line="124" Column="9" TopLine="73"/>
+        <Caret Line="113" Column="41" TopLine="84"/>
       </Position19>
       <Position20>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="182" Column="14" TopLine="145"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="18" Column="19" TopLine="6"/>
       </Position20>
       <Position21>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="183" Column="8" TopLine="145"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="95" Column="23" TopLine="70"/>
       </Position21>
       <Position22>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="208" Column="30" TopLine="162"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="112" Column="55" TopLine="71"/>
       </Position22>
       <Position23>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="2" Column="1" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="95" Column="23" TopLine="70"/>
       </Position23>
       <Position24>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="213" Column="22" TopLine="189"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="112" Column="39" TopLine="69"/>
       </Position24>
       <Position25>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="56" Column="68" TopLine="46"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="95" Column="35" TopLine="69"/>
       </Position25>
       <Position26>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="8" Column="45" TopLine="1"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="143" Column="29" TopLine="109"/>
       </Position26>
       <Position27>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="41" Column="33" TopLine="3"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="137" Column="24" TopLine="117"/>
       </Position27>
       <Position28>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="233" Column="26" TopLine="190"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="120" Column="36" TopLine="99"/>
       </Position28>
       <Position29>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="60" Column="28" TopLine="9"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="136" Column="24" TopLine="111"/>
       </Position29>
       <Position30>
-        <Filename Value="cameras.pas"/>
-        <Caret Line="36" Column="10" TopLine="10"/>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="121" Column="28" TopLine="111"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
