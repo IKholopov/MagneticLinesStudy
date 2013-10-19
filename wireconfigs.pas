@@ -128,13 +128,154 @@ end;
 //Calculations
 function ThreeRingsConfig.Calculate(x, y, z: real): boolean;
 begin
-
+  Vectors[0] := BField(x,y,z);
   Result := true;
 end;
 
 function ThreeRingsConfig.BField(x, y, z:extended):vector3;
+const dAngle = pi / 600;
+var tx, ty, tz, m1, m2, r1, r2, lll, dlm, rm, sna: extended;
+    v1, v2, v3: vector3;
+    ang: extended; //текущий угол и шаг угла
+    qx, qy, qz: extended; //положение точки Q
+    dl, rr, v22: vector3; //вектор тока и вектор направления на точку
 begin
 
+  v1.x := 0;
+  v1.y := 0;
+  v1.z := 0;
+  v2.x := 0;
+  v2.y := 0;
+  v2.z := 0;
+  v3.x := 0;
+  v3.y := 0;
+  v3.z := 0;
+
+
+
+  ang := 0;
+  dlm := TorusRadius * sin(dAngle);
+
+  while (ang < (2 * pi)) do begin
+    // showmessage(floattostr(ang));
+
+    dl.x := - dlm * sin(ang);
+    dl.y := dlm * cos(ang);
+    dl.z := 0;
+
+    qx := TorusRadius * cos(ang);
+    qy := TorusRadius * sin(ang);
+    qz := 0;
+
+    rr.x := x - qx;
+    rr.y := y - qy;
+    rr.z := z - qz;
+
+    rm := sqrt(rr.x * rr.x + rr.y * rr.y + rr.z * rr.z);
+
+    sna := sqrt(1 - (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z) *
+                    (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z)
+                    / rm / rm / dlm / dlm);
+
+    m2 := (dlm / 2) * Amperage * sna / rm / rm;
+
+    v22.x := rr.y * dl.z - rr.z * dl.y;         //векторное произведение
+    v22.y := rr.z * dl.x - rr.x * dl.z;
+    v22.z := rr.x * dl.y - rr.y * dl.x;
+
+    lll := sqrt(v22.x * v22.x + v22.y * v22.y + v22.z * v22.z);
+
+    v2.x := v2.x + m2 * (v22.x / lll);
+    v2.y := v2.y + m2 * (v22.y / lll);
+    v2.z := v2.z + m2 * (v22.z / lll);
+
+    ang := ang + dAngle;
+  end;
+
+
+  ang := 0;
+  dlm := TorusRadius * sin(dAngle);
+
+  while (ang < (2 * pi)) do begin
+    // showmessage(floattostr(ang));
+
+    dl.x := - dlm * sin(ang);
+    dl.y := dlm * cos(ang);
+    dl.z := 0;
+
+    qx := TorusRadius * cos(ang);
+    qy := TorusRadius * sin(ang);
+    qz := TorusDistance;
+
+    rr.x := x - qx;
+    rr.y := y - qy;
+    rr.z := z - qz;
+
+    rm := sqrt(rr.x * rr.x + rr.y * rr.y + rr.z * rr.z);
+
+    sna := sqrt(1 - (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z) *
+                    (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z)
+                    / rm / rm / dlm / dlm);
+
+    m2 := (dlm / 2) * Amperage * sna / rm / rm;
+
+    v22.x := rr.y * dl.z - rr.z * dl.y;         //векторное произведение
+    v22.y := rr.z * dl.x - rr.x * dl.z;
+    v22.z := rr.x * dl.y - rr.y * dl.x;
+
+    lll := sqrt(v22.x * v22.x + v22.y * v22.y + v22.z * v22.z);
+
+    v2.x := v2.x + m2 * (v22.x / lll);
+    v2.y := v2.y + m2 * (v22.y / lll);
+    v2.z := v2.z + m2 * (v22.z / lll);
+
+    ang := ang + dAngle;
+  end;
+
+
+  ang := 0;
+  dlm := TorusRadius * sin(dAngle);
+
+  while (ang < (2 * pi)) do begin
+    // showmessage(floattostr(ang));
+
+    dl.x := - dlm * sin(ang);
+    dl.y := dlm * cos(ang);
+    dl.z := 0;
+
+    qx := TorusRadius * cos(ang);
+    qy := TorusRadius * sin(ang);
+    qz := -TorusDistance;
+
+    rr.x := x - qx;
+    rr.y := y - qy;
+    rr.z := z - qz;
+
+    rm := sqrt(rr.x * rr.x + rr.y * rr.y + rr.z * rr.z);
+
+    sna := sqrt(1 - (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z) *
+                    (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z)
+                    / rm / rm / dlm / dlm);
+
+    m2 := (dlm / 2) * Amperage * sna / rm / rm;
+
+    v22.x := rr.y * dl.z - rr.z * dl.y;         //векторное произведение
+    v22.y := rr.z * dl.x - rr.x * dl.z;
+    v22.z := rr.x * dl.y - rr.y * dl.x;
+
+    lll := sqrt(v22.x * v22.x + v22.y * v22.y + v22.z * v22.z);
+
+    v2.x := v2.x + m2 * (v22.x / lll);
+    v2.y := v2.y + m2 * (v22.y / lll);
+    v2.z := v2.z + m2 * (v22.z / lll);
+
+    ang := ang + dAngle;
+  end;
+
+
+  result.x := v1.x + v2.x + v3.x;
+  result.y := v1.y + v2.y + v3.y;
+  result.z := v1.z + v2.z + v3.z;
 end;
 
 procedure  ThreeRingsConfig.DrawWire();
@@ -169,6 +310,11 @@ begin
     glEndList();
 
     glCallList(torus);
+    {glBegin(GL_LINES );
+                     glVertex3f(2,2,2);
+                     glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
+    glEnd;}
+
 end;
 
 end.

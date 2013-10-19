@@ -23,11 +23,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="134"/>
-        <CursorPos X="51" Y="150"/>
+        <CursorPos X="36" Y="154"/>
         <UsageCount Value="56"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -36,10 +35,11 @@
         <Filename Value="wireconfigs.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireConfigs"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="40"/>
-        <CursorPos X="19" Y="71"/>
+        <TopLine Value="122"/>
+        <CursorPos X="25" Y="140"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -60,7 +60,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="678"/>
         <CursorPos X="5" Y="704"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit4>
       <Unit5>
         <Filename Value="C:\lazarus\lcl\forms.pp"/>
