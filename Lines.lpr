@@ -7,7 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, lazopenglcontext, MainForm, Cameras, WireConfigs
+  Forms, lazopenglcontext, MainForm, Cameras,
+  wireconfig, WireConfigs, ThreeRingsConfig
   { you can add units after this };
 
 {$R *.res}

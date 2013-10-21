@@ -20,7 +20,7 @@ type
     ZLabel: TLabel;
     ZCordEdit: TEdit;
     CalculateButton: TButton;
-    Config: TWireConfig;
+    Config: TWireConfiguration;
     Camera1: Camera;
 
     procedure FormResize(Sender: TObject);
@@ -65,7 +65,7 @@ begin
   Names.Add('Perpendicular');
   Names.Add('Wire and coil');
 
-  Config := ThreeRingsConfig.Create;
+  Config := ThreeRingsConfiguration.Create;
   with Config do
   begin
     Load(Form1);
@@ -153,18 +153,18 @@ end;
 
 //OpenGl
 procedure TMainForm.OpenGLControllerPaint(Sender: TObject);
-const lights: array[0..3] of GLfloat = (0.8, 0.8, 0.8, 1);
+const lights: array[0..3] of GLfloat = (-2, 1, 4, 1);
 begin
   if OpenGLController.MakeCurrent then
   begin
     if not GLAreaInitialized then
     begin
-      glEnable(GL_LIGHTING);
-      glLightfv(GL_LIGHT0, GL_POSITION, lights);
-      glEnable(GL_LIGHT0);
       glMatrixMode(GL_PROJECTION);
       glLoadIdentity();
       glFrustum(-1.0, 1.0, -1.0, 1.0, 1, 100.0);
+      glEnable(GL_LIGHTING);
+
+      glEnable(GL_LIGHT0);
       glMatrixMode(GL_MODELVIEW);
       glViewport(0, 0, OpenGLController.Width, OpenGLController.Height);
       glEnable(GL_DEPTH_TEST);
@@ -174,14 +174,14 @@ begin
     glClearColor(0.942,0.942,0.942,1.0);
     glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT);
     glEnable(GL_COLOR_MATERIAL);
-    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
     glLoadIdentity;
     glTranslatef(0, 0, -2*Pi);
-    glPushMatrix;
+
+    glMatrixMode(GL_MODELVIEW);
     Camera1.Update();
+    glLightfv(GL_LIGHT0, GL_POSITION, lights);
     DrawCoords();
     Config.DrawWire();
-    glPushMatrix;
     OpenGLController.SwapBuffers;
   end;
 end;
@@ -265,8 +265,10 @@ begin
 end;
 
 procedure TMainForm.CalculateClick(Sender: TObject);
+var x, y, z: double;
 begin
-      Config.Calculate(StrToFloat(XCordEdit.Text), StrToFloat(YCordEdit.Text), StrToFloat(ZCordEdit.Text));
+      if TryStrToFloat(XCordEdit.Text,x) and TryStrToFloat(YCordEdit.Text,y) and TryStrToFloat(ZCordEdit.Text, z) then
+      Config.Calculate(x, y, z);
 end;
 
 procedure TMainForm.IdleFunc(Sender: TObject; var Done: Boolean);

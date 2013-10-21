@@ -4,16 +4,16 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="20">
+    <Units Count="30">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Lines"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="19" Y="19"/>
-        <UsageCount Value="60"/>
+        <CursorPos X="44" Y="11"/>
+        <UsageCount Value="74"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -25,22 +25,20 @@
         <UnitName Value="MainForm"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="223"/>
-        <CursorPos X="41" Y="269"/>
-        <UsageCount Value="60"/>
+        <TopLine Value="153"/>
+        <CursorPos X="18" Y="183"/>
+        <UsageCount Value="74"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="wireconfigs.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireConfigs"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="227"/>
-        <CursorPos X="18" Y="250"/>
-        <UsageCount Value="36"/>
+        <TopLine Value="1"/>
+        <CursorPos X="21" Y="8"/>
+        <UsageCount Value="50"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -50,257 +48,343 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="12"/>
-        <CursorPos X="19" Y="14"/>
-        <UsageCount Value="41"/>
+        <CursorPos X="19" Y="43"/>
+        <UsageCount Value="55"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
+        <Filename Value="threeringsconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ThreeRingsConfig"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="82"/>
+        <CursorPos X="15" Y="101"/>
+        <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="wireconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WireConfig"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="26" Y="19"/>
+        <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
         <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
         <UnitName Value="StdCtrls"/>
         <WindowIndex Value="0"/>
         <TopLine Value="678"/>
         <CursorPos X="5" Y="704"/>
-        <UsageCount Value="18"/>
-      </Unit4>
-      <Unit5>
+        <UsageCount Value="17"/>
+      </Unit6>
+      <Unit7>
         <Filename Value="C:\lazarus\lcl\forms.pp"/>
         <UnitName Value="Forms"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="734"/>
-        <CursorPos X="24" Y="758"/>
-        <UsageCount Value="14"/>
-      </Unit5>
-      <Unit6>
+        <TopLine Value="10"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="16"/>
+      </Unit7>
+      <Unit8>
         <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1943"/>
         <CursorPos X="27" Y="1966"/>
-        <UsageCount Value="8"/>
-      </Unit6>
-      <Unit7>
+        <UsageCount Value="7"/>
+      </Unit8>
+      <Unit9>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="4663"/>
-        <CursorPos X="19" Y="4688"/>
+        <TopLine Value="3223"/>
+        <CursorPos X="1" Y="3246"/>
         <UsageCount Value="10"/>
-      </Unit7>
-      <Unit8>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
         <Filename Value="C:\lazarus\lcl\lclproc.pas"/>
         <UnitName Value="LCLProc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
-      </Unit8>
-      <Unit9>
-        <Filename Value="C:\lazarus\lcl\controls.pp"/>
-        <UnitName Value="Controls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2091"/>
-        <CursorPos X="15" Y="2116"/>
-        <UsageCount Value="18"/>
-      </Unit9>
-      <Unit10>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpash.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="167"/>
-        <CursorPos X="22" Y="187"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit10>
       <Unit11>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1490"/>
+        <CursorPos X="71" Y="1522"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpash.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="157"/>
+        <CursorPos X="8" Y="183"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
         <Filename Value="C:\lazarus\components\opengl\openglcontext.pas"/>
         <UnitName Value="OpenGLContext"/>
         <WindowIndex Value="0"/>
         <TopLine Value="256"/>
         <CursorPos X="19" Y="179"/>
-        <UsageCount Value="9"/>
-      </Unit11>
-      <Unit12>
+        <UsageCount Value="8"/>
+      </Unit13>
+      <Unit14>
         <Filename Value="C:\lazarus\lcl\lcltype.pp"/>
         <UnitName Value="LCLType"/>
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="16" Y="164"/>
-        <UsageCount Value="9"/>
-      </Unit12>
-      <Unit13>
+        <UsageCount Value="8"/>
+      </Unit14>
+      <Unit15>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\keybrdh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="22"/>
-        <UsageCount Value="9"/>
-      </Unit13>
-      <Unit14>
+        <UsageCount Value="8"/>
+      </Unit15>
+      <Unit16>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\keyboard.pp"/>
         <UnitName Value="Keyboard"/>
         <WindowIndex Value="0"/>
         <TopLine Value="129"/>
         <CursorPos X="50" Y="170"/>
-        <UsageCount Value="9"/>
-      </Unit14>
-      <Unit15>
+        <UsageCount Value="8"/>
+      </Unit16>
+      <Unit17>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\wininc\struct.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="3947"/>
         <CursorPos X="19" Y="3973"/>
-        <UsageCount Value="9"/>
-      </Unit15>
-      <Unit16>
+        <UsageCount Value="8"/>
+      </Unit17>
+      <Unit18>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\opengl\src\gl.pp"/>
         <UnitName Value="GL"/>
-        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="134"/>
-        <CursorPos X="3" Y="153"/>
-        <UsageCount Value="12"/>
-        <Loaded Value="True"/>
-      </Unit16>
-      <Unit17>
+        <TopLine Value="1196"/>
+        <CursorPos X="3" Y="1222"/>
+        <UsageCount Value="14"/>
+      </Unit18>
+      <Unit19>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\opengl\src\glu.pp"/>
         <UnitName Value="glu"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
-      </Unit17>
-      <Unit18>
+        <UsageCount Value="8"/>
+      </Unit19>
+      <Unit20>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\classes\classesh.inc"/>
         <WindowIndex Value="0"/>
         <TopLine Value="94"/>
         <CursorPos X="3" Y="120"/>
-        <UsageCount Value="9"/>
-      </Unit18>
-      <Unit19>
+        <UsageCount Value="8"/>
+      </Unit20>
+      <Unit21>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysstrh.inc"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="150"/>
-        <CursorPos X="10" Y="176"/>
+        <TopLine Value="99"/>
+        <CursorPos X="10" Y="107"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="threeringsconfiguration.pas"/>
+        <UnitName Value="ThreeRingsConfiguration"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="20"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysutilh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="4" Y="36"/>
         <UsageCount Value="9"/>
-      </Unit19>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\systemh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="353"/>
+        <CursorPos X="3" Y="379"/>
+        <UsageCount Value="9"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="151"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="13"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\objpas.pp"/>
+        <UnitName Value="objpas"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2"/>
+        <CursorPos X="8" Y="28"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4636"/>
+        <CursorPos X="34" Y="4711"/>
+        <UsageCount Value="10"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\lazarus\lcl\include\customcontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="73"/>
+        <CursorPos X="1" Y="99"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1329"/>
+        <CursorPos X="44" Y="1357"/>
+        <UsageCount Value="10"/>
+      </Unit29>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="143" Column="29" TopLine="109"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="156" Column="51" TopLine="142"/>
       </Position1>
       <Position2>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="137" Column="24" TopLine="117"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="153" Column="79" TopLine="4"/>
       </Position2>
       <Position3>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="120" Column="36" TopLine="99"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="200" Column="18" TopLine="175"/>
       </Position3>
       <Position4>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="136" Column="24" TopLine="111"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="19" Column="22" TopLine="1"/>
       </Position4>
       <Position5>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="121" Column="28" TopLine="111"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="35" Column="22" TopLine="1"/>
       </Position5>
       <Position6>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="140" Column="25" TopLine="122"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="22" Column="34" TopLine="1"/>
       </Position6>
       <Position7>
         <Filename Value="wireconfigs.pas"/>
-        <Caret Line="156" Column="13" TopLine="130"/>
+        <Caret Line="12" Column="29" TopLine="1"/>
       </Position7>
       <Position8>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="166" Column="22" TopLine="130"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="8" Column="20" TopLine="1"/>
       </Position8>
       <Position9>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="196" Column="21" TopLine="153"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="101" Column="16" TopLine="88"/>
       </Position9>
       <Position10>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="206" Column="22" TopLine="162"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="102" Column="12" TopLine="88"/>
       </Position10>
       <Position11>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="236" Column="21" TopLine="193"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="101" Column="15" TopLine="75"/>
       </Position11>
       <Position12>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="246" Column="22" TopLine="202"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="142" Column="7" TopLine="104"/>
       </Position12>
       <Position13>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="156" Column="29" TopLine="130"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="8" Column="47" TopLine="1"/>
       </Position13>
       <Position14>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="191" Column="24" TopLine="148"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="133" Column="9" TopLine="108"/>
       </Position14>
       <Position15>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="136" Column="25" TopLine="117"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="134" Column="10" TopLine="108"/>
       </Position15>
       <Position16>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="157" Column="30" TopLine="131"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="135" Column="12" TopLine="94"/>
       </Position16>
       <Position17>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="272" Column="24" TopLine="229"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="19" Column="26" TopLine="1"/>
       </Position17>
       <Position18>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="157" Column="34" TopLine="132"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="269" Column="109" TopLine="230"/>
       </Position18>
       <Position19>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="180" Column="25" TopLine="155"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="270" Column="57" TopLine="230"/>
       </Position19>
       <Position20>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="297" Column="37" TopLine="253"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="269" Column="10" TopLine="231"/>
       </Position20>
       <Position21>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="180" Column="31" TopLine="155"/>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="271" Column="20" TopLine="231"/>
       </Position21>
       <Position22>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="208" Column="14" TopLine="183"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="108" Column="3" TopLine="37"/>
       </Position22>
       <Position23>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="248" Column="15" TopLine="223"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="93" Column="27" TopLine="55"/>
       </Position23>
       <Position24>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="34" Column="23" TopLine="15"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="22" Column="10" TopLine="1"/>
       </Position24>
       <Position25>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="208" Column="24" TopLine="165"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="230" Column="27" TopLine="209"/>
       </Position25>
       <Position26>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="248" Column="25" TopLine="205"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="119" Column="33" TopLine="93"/>
       </Position26>
       <Position27>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="283" Column="6" TopLine="257"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="123" Column="7" TopLine="93"/>
       </Position27>
       <Position28>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="293" Column="13" TopLine="265"/>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <Caret Line="3245" Column="26" TopLine="3223"/>
       </Position28>
       <Position29>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="313" Column="14" TopLine="265"/>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <Caret Line="1515" Column="15" TopLine="1490"/>
       </Position29>
       <Position30>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="154" Column="36" TopLine="209"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="101" Column="15" TopLine="82"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="6">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -62,13 +62,23 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Cameras"/>
       </Unit3>
+      <Unit4>
+        <Filename Value="threeringsconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ThreeRingsConfig"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="wireconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WireConfig"/>
+      </Unit5>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="\bin\Lines"/>
+      <Filename Value=".\bin\Lines"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
