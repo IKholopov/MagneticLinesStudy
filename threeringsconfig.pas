@@ -37,10 +37,9 @@ implementation
 procedure  TThreeRingsConfig.Load(Form: TForm);
 begin
   Amperage := 0;
-  TorusRadius := 1;
-  TorusDistance := 1;
-  Lines[0] := 1;
-  glNewList(Lines[1], GL_COMPILE);
+  TorusRadius := 5;
+  TorusDistance := 2;
+  DisplayLines := false;
 
   RadiusLabel := TLabel.Create(Form);
   with RadiusLabel do begin
@@ -98,14 +97,15 @@ begin
 end;
 //Calculations
 function TThreeRingsConfig.Calculate(x, y, z: real): boolean;
-const e = 0.05; ex = 0.01;
+const e = 0.1; ex = 0.01;
 var i: integer;
 dx, dy, dz, l: extended;
 vt: vector3;
+fileVar:TextFile;
 begin
-  inc(Lines[0]);
-  Lines[Lines[0]] := Lines[Lines[0] - 1] + 1;
-  glNewList(Lines[Lines[0]], GL_COMPILE);
+  AssignFile(fileVar, 'Verts.txt');
+  Rewrite(fileVar);
+
   Vectors[0].X := x;
   Vectors[0].Y := y;
   Vectors[0].Z := z;
@@ -131,16 +131,18 @@ begin
           (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
           (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
     writeln;}
+    writeln(fileVar, Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
     if (abs(Vectors[i].X - Vectors[0].X) < e) and
        (abs(Vectors[i].y - Vectors[0].y) < e) and
        (abs(Vectors[i].z - Vectors[0].z) < e) and
        (i > 150) then begin
         showmessage('yes!');
-        exit;
+        break;
       end;
-    //inc(i);
-
   end;
+   LinesLength := i;
+  DisplayLines := true;
+  CloseFile(fileVar);
   Result := true;
 end;
 
@@ -252,7 +254,7 @@ procedure  TThreeRingsConfig.DrawWire();
 const Pi2 = 2 * Pi;
 var i ,j, k, n, numc, numt: integer;
   s, t, x, y, z, offset: double;
-  torus: GLuint;
+  torus, Lines: GLuint;
 begin
     torus := glGenLists(1);
     numc := 6;
@@ -280,10 +282,19 @@ begin
     glEndList();
 
     glCallList(torus);
-    {glBegin(GL_LINES );
-                     glVertex3f(0,0,0);
-                     glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
-    glEnd;}
+    if DisplayLines then begin
+
+
+    glBegin(GL_LINE_STRIP);
+    for i := 0 to LinesLength do begin
+          glColor3f(0, 1, 1);
+          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
+    end;
+    glColor3f(0, 0, 1);
+          glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
+    glEnd();
+
+    end;
 
 end;
 

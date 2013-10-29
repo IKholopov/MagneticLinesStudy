@@ -16,8 +16,10 @@ type
   private
 
   public
-        Lines: array[0..20000] of GLuint;
-        Vectors: array[0..199] of vector3;
+        //Lines: GLuint;
+        LinesLength: integer;
+        DisplayLines: boolean;
+        Vectors: array[0..10000] of vector3;
         procedure Load(Form: TForm); virtual;
         function Calculate(x, y, z: real):boolean; virtual;
         procedure DrawWire(); virtual;
