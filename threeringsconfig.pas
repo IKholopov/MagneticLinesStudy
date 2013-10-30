@@ -244,6 +244,44 @@ begin
 
     ang := ang + dAngle;
   end;
+  ang := 0;
+  dlm := TorusRadius * sin(dAngle);
+
+  while (ang < (2 * pi)) do begin
+    // showmessage(floattostr(ang));
+
+    dl.x := - dlm * sin(ang);
+    dl.y := dlm * cos(ang);
+    dl.z := 0;
+
+    qx := TorusRadius * cos(ang);
+    qy := TorusRadius * sin(ang);
+    qz := -TorusDistance;
+
+    rr.x := x - qx;
+    rr.y := y - qy;
+    rr.z := z - qz;
+
+    rm := sqrt(rr.x * rr.x + rr.y * rr.y + rr.z * rr.z);
+
+    sna := sqrt(1 - (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z) *
+                    (dl.x * rr.x + dl.y * rr.y + dl.z * rr.z)
+                    / rm / rm / dlm / dlm);
+
+    m2 := (dlm / 2) * Amperage * sna / rm / rm;
+
+    v22.x := rr.y * dl.z - rr.z * dl.y;         //векторное произведение
+    v22.y := rr.z * dl.x - rr.x * dl.z;
+    v22.z := rr.x * dl.y - rr.y * dl.x;
+
+    lll := sqrt(v22.x * v22.x + v22.y * v22.y + v22.z * v22.z);
+
+    v2.x := v2.x + m2 * (v22.x / lll);
+    v2.y := v2.y + m2 * (v22.y / lll);
+    v2.z := v2.z + m2 * (v22.z / lll);
+
+    ang := ang + dAngle;
+  end;
 
   result.x := v1.x + v2.x + v3.x;
   result.y := v1.y + v2.y + v3.y;
@@ -259,7 +297,7 @@ begin
     torus := glGenLists(1);
     numc := 6;
     numt := 50;
-    offset := -TorusDistance;
+    offset := -TorusDistance/2;
     glNewList(torus, GL_COMPILE);
     for n := 0 to 2 do begin
        for i := 0 to numc - 1 do begin
@@ -277,7 +315,7 @@ begin
               end;
               glEnd;
        end;
-       offset := offset + TorusDistance;
+       offset := offset + TorusDistance/2;
     end;
     glEndList();
 
