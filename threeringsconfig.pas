@@ -27,12 +27,18 @@ uses
          procedure RadiusEditUpdate(Sender: TObject);
 
   public
+         constructor Create();
          procedure Load(Form: TForm); override;
          function Calculate(x, y, z: real): boolean; override;
          procedure DrawWire(); override;
   end;
 
 implementation
+
+constructor TThreeRingsConfig.Create();
+begin
+  LinesLength := 0;
+end;
 
 procedure  TThreeRingsConfig.Load(Form: TForm);
 begin
@@ -140,10 +146,23 @@ begin
         break;
       end;
   end;
-   LinesLength := i;
-  DisplayLines := true;
-  CloseFile(fileVar);
-  Result := true;
+   VectorsLength := i;
+
+   Lines := glGenLists(1);
+    glNewList(Lines, GL_COMPILE);
+    glBegin(GL_LINE_STRIP);
+    for i := 0 to VectorsLength do begin
+          glColor3f(0, 1, 1);
+          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
+    end;
+    glColor3f(0, 0, 1);
+          glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
+    glEnd();
+    glEndList();
+
+   DisplayLines := true;
+   CloseFile(fileVar);
+   Result := true;
 end;
 
 function TThreeRingsConfig.BField(x, y, z:extended):vector3;
@@ -292,7 +311,7 @@ procedure  TThreeRingsConfig.DrawWire();
 const Pi2 = 2 * Pi;
 var i ,j, k, n, numc, numt: integer;
   s, t, x, y, z, offset: double;
-  torus, Lines: GLuint;
+  torus: GLuint;
 begin
     torus := glGenLists(1);
     numc := 6;
@@ -320,19 +339,8 @@ begin
     glEndList();
 
     glCallList(torus);
-    if DisplayLines then begin
-
-
-    glBegin(GL_LINE_STRIP);
-    for i := 0 to LinesLength do begin
-          glColor3f(0, 1, 1);
-          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
-    end;
-    glColor3f(0, 0, 1);
-          glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
-    glEnd();
-
-    end;
+    if DisplayLines then
+    glCallList(Lines);
 
 end;
 

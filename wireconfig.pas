@@ -16,10 +16,11 @@ type
   private
 
   public
-        //Lines: GLuint;
+        Lines: GLuint;
         LinesLength: integer;
         DisplayLines: boolean;
         Vectors: array[0..10000] of vector3;
+        VectorsLength: integer;
         procedure Load(Form: TForm); virtual;
         function Calculate(x, y, z: real):boolean; virtual;
         procedure DrawWire(); virtual;
