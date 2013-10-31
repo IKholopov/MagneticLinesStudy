@@ -150,9 +150,9 @@ function TThreeRingsConfig.BField(x, y, z:extended):vector3;
 const dAngle = pi / 600;
 var m2, lll, dlm, rm, sna: extended;
     v1, v2, v3: vector3;
-    ang: extended; //текущий угол и шаг угла
-    qx, qy, qz: extended; //положение точки Q
-    dl, rr, v22: vector3; //вектор тока и вектор направления на точку
+    ang: extended; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    qx, qy, qz: extended; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ Q
+    dl, rr, v22: vector3; //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 begin
 
   v1.x := 0;
@@ -193,7 +193,7 @@ begin
 
     m2 := (dlm / 2) * Amperage * sna / rm / rm;
 
-    v22.x := rr.y * dl.z - rr.z * dl.y;         //векторное произведение
+    v22.x := rr.y * dl.z - rr.z * dl.y;         //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     v22.y := rr.z * dl.x - rr.x * dl.z;
     v22.z := rr.x * dl.y - rr.y * dl.x;
 
@@ -270,7 +270,7 @@ begin
 
     m2 := (dlm / 2) * Amperage * sna / rm / rm;
 
-    v22.x := rr.y * dl.z - rr.z * dl.y;         //векторное произведение
+    v22.x := rr.y * dl.z - rr.z * dl.y;         //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     v22.y := rr.z * dl.x - rr.x * dl.z;
     v22.z := rr.x * dl.y - rr.y * dl.x;
 
@@ -297,7 +297,7 @@ begin
     torus := glGenLists(1);
     numc := 6;
     numt := 50;
-    offset := -TorusDistance/2;
+    offset := -TorusDistance;
     glNewList(torus, GL_COMPILE);
     for n := 0 to 2 do begin
        for i := 0 to numc - 1 do begin
@@ -308,14 +308,14 @@ begin
                       t := j mod numt;
                       x := (TorusRadius + 0.1*cos(s * Pi2/numc))*cos(t*Pi2/numt);
                       y := (TorusRadius + 0.1*cos(s * Pi2/numc))*sin(t*Pi2/numt);
-                      z := offset*2 + 0.1*sin(s * Pi2/numc);
+                      z := offset + 0.1*sin(s * Pi2/numc);
                       glColor3f(1, 0.3, 0.25);
                       glVertex3f(x, y, z);
                       end;
               end;
               glEnd;
        end;
-       offset := offset + TorusDistance/2;
+       offset := offset + TorusDistance;
     end;
     glEndList();
 
