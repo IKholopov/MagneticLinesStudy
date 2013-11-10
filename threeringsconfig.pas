@@ -16,7 +16,6 @@ uses
           EditI: TEdit;
           DistanceLabel:TLabel;
           DistanceEdit: TEdit;
-          UpdateConfigButton: TButton;
   private
          TorusDistance: real;
          Amperage:real;

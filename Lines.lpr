@@ -8,7 +8,7 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, lazopenglcontext, MainForm, Cameras,
-  wireconfig, WireConfigs, ThreeRingsConfig
+  wireconfig, WireConfigs, ThreeRingsConfig, ParallelConfig
   { you can add units after this };
 
 {$R *.res}
