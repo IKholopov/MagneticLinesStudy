@@ -16,6 +16,7 @@ type
   private
 
   public
+        BaseGeometry: GLuint;
         Lines: GLuint;
         LinesLength: integer;
         DisplayLines: boolean;
@@ -23,6 +24,7 @@ type
         VectorsLength: integer;
         procedure Load(Form: TForm); virtual;
         function Calculate(x, y, z: real):boolean; virtual;
+        procedure Reshape(); virtual;
         procedure DrawWire(); virtual;
   end;   
   
@@ -43,6 +45,10 @@ end;
 procedure  TWireConfig.DrawWire();
 begin
   raise exception.Create('Absract class TWireConfig doesnt implement DrawWire()');
-end;  
+end;
+procedure  TWireConfig.Reshape();
+begin
+  raise exception.Create('Absract class TWireConfig doesnt implement Reshape()');
+end;
 
 end.

@@ -65,7 +65,7 @@ begin
   Names.Add('Perpendicular');
   Names.Add('Wire and coil');
 
-  Config := ThreeRingsConfiguration.Create;
+  Config := ParallelConfiguration.Create;
   with Config do
   begin
     Load(Form1);
@@ -154,6 +154,8 @@ end;
 //OpenGl
 procedure TMainForm.OpenGLControllerPaint(Sender: TObject);
 const lights: array[0..3] of GLfloat = (-2, 1, 4, 1);
+   mat_specular: array[0..3] of GLfloat = (1.0, 1.0, 1.0, 1.0);
+   mat_shininess: array[0..0] of GLfloat = (50.0);
 begin
   if OpenGLController.MakeCurrent then
   begin
@@ -162,8 +164,12 @@ begin
       glMatrixMode(GL_PROJECTION);
       glLoadIdentity();
       glFrustum(-1.0, 1.0, -1.0, 1.0, 1, 100.0);
+      glShadeModel (GL_SMOOTH);
+      glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+      glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+      glLightfv(GL_LIGHT0, GL_POSITION, lights);
       glEnable(GL_LIGHTING);
-
+      Config.Reshape();
       glEnable(GL_LIGHT0);
       glMatrixMode(GL_MODELVIEW);
       glViewport(0, 0, OpenGLController.Width, OpenGLController.Height);
@@ -175,7 +181,7 @@ begin
     glClear(GL_COLOR_BUFFER_BIT or GL_DEPTH_BUFFER_BIT);
     glEnable(GL_COLOR_MATERIAL);
     glLoadIdentity;
-    glTranslatef(0, 0, -2*Pi);
+    glTranslatef(0, 0, -4*Pi);
 
     glMatrixMode(GL_MODELVIEW);
     Camera1.Update();

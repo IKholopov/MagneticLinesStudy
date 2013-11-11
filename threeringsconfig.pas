@@ -29,6 +29,7 @@ uses
          constructor Create();
          procedure Load(Form: TForm); override;
          function Calculate(x, y, z: real): boolean; override;
+         procedure Reshape(); override;
          procedure DrawWire(); override;
   end;
 
@@ -45,7 +46,7 @@ begin
   TorusRadius := 5;
   TorusDistance := 2;
   DisplayLines := false;
-
+  Reshape();
   RadiusLabel := TLabel.Create(Form);
   with RadiusLabel do begin
      Caption := 'Radius:';
@@ -91,14 +92,17 @@ end;
 procedure TThreeRingsConfig.RadiusEditUpdate(Sender: TObject);
 begin
     TryStrToFloat(EditRadius.Text, TorusRadius);
+    Reshape();
 end;
 procedure TThreeRingsConfig.EditIUpdate(Sender: TObject);
 begin
      TryStrToFloat(EditI.Text, Amperage);
+     Reshape();
 end;
 procedure TThreeRingsConfig.DistanceEditUpdate(Sender: TObject);
 begin
     TryStrToFloat(DistanceEdit.Text, TorusDistance);
+    Reshape();
 end;
 //Calculations
 function TThreeRingsConfig.Calculate(x, y, z: real): boolean;
@@ -306,17 +310,16 @@ begin
   result.z := v1.z + v2.z + v3.z;
 end;
 
-procedure  TThreeRingsConfig.DrawWire();
+procedure  TThreeRingsConfig.Reshape();
 const Pi2 = 2 * Pi;
 var i ,j, k, n, numc, numt: integer;
   s, t, x, y, z, offset: double;
-  torus: GLuint;
 begin
-    torus := glGenLists(1);
+    BaseGeometry := glGenLists(1);
     numc := 6;
     numt := 50;
     offset := -TorusDistance;
-    glNewList(torus, GL_COMPILE);
+    glNewList(BaseGeometry, GL_COMPILE);
     for n := 0 to 2 do begin
        for i := 0 to numc - 1 do begin
              glBegin(GL_QUAD_STRIP);
@@ -337,7 +340,10 @@ begin
     end;
     glEndList();
 
-    glCallList(torus);
+end;
+procedure  TThreeRingsConfig.DrawWire();
+begin
+    glCallList(BaseGeometry);
     if DisplayLines then
     glCallList(Lines);
 
