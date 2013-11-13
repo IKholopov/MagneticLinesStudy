@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LCLProc, LCLType, Forms, LResources, Buttons,
-  StdCtrls, ExtCtrls, Dialogs, Graphics, IntfGraphics, GL, FPimage, OpenGLContext,
+  StdCtrls, ExtCtrls, ComCtrls, Dialogs, Graphics, IntfGraphics, GL, FPimage, OpenGLContext,
   WireConfigs, Cameras;
 
 type
@@ -19,6 +19,7 @@ type
     YCordEdit: TEdit;
     ZLabel: TLabel;
     ZCordEdit: TEdit;
+    ProgressBar: TProgressBar;
     CalculateButton: TButton;
     Config: TWireConfiguration;
     Camera1: Camera;
@@ -65,11 +66,6 @@ begin
   Names.Add('Perpendicular');
   Names.Add('Wire and coil');
 
-  Config := ParallelConfiguration.Create;
-  with Config do
-  begin
-    Load(Form1);
-  end;
 
   ConfigsComboBox := TComboBox.Create(Self); //A selection of different configs
   with ConfigsComboBox do
@@ -121,6 +117,13 @@ begin
     SetBounds(20, 410, 100, 40);
     Parent := Self;
   end;
+  ProgressBar := TProgressBar.Create(Self);
+  with ProgressBar do
+  begin
+    Parent := Self;
+    SetBounds(20,500, 80, 20);
+    Visible := false;
+  end;
 
   CalculateButton := TButton.Create(Self);
   with CalculateButton do
@@ -142,6 +145,12 @@ begin
     OnPaint := @OpenGLControllerPaint;
     OnResize := @OpenGLControllerResize;
   end;
+
+  Config := ThreeRingsConfiguration.Create(ProgressBar);
+  with Config do
+  begin
+    Load(Form1);
+  end;
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
@@ -155,7 +164,7 @@ end;
 procedure TMainForm.OpenGLControllerPaint(Sender: TObject);
 const lights: array[0..3] of GLfloat = (-2, 1, 4, 1);
    mat_specular: array[0..3] of GLfloat = (1.0, 1.0, 1.0, 1.0);
-   mat_shininess: array[0..0] of GLfloat = (50.0);
+   mat_shininess: array[0..0] of GLfloat = (120.0);
 begin
   if OpenGLController.MakeCurrent then
   begin

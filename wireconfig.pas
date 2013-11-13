@@ -5,7 +5,7 @@ unit WireConfig;
 interface
 
 uses
-  Classes, SysUtils, Forms, GL;
+  Classes, SysUtils, Forms, ComCtrls, GL;
  {$M+}
 type
   vector3 = record
@@ -20,8 +20,10 @@ type
         Lines: GLuint;
         LinesLength: integer;
         DisplayLines: boolean;
-        Vectors: array[0..10000] of vector3;
+        Vectors: array[0..200000] of vector3;
         VectorsLength: integer;
+        ProgressBar: TProgressBar;
+        constructor Create(bar: TProgressBar);
         procedure Load(Form: TForm); virtual;
         function Calculate(x, y, z: real):boolean; virtual;
         procedure Reshape(); virtual;
@@ -32,6 +34,10 @@ type
 
 
      {TWireConfig}
+constructor TWireConfig.Create(bar: TProgressBar);
+begin
+  raise exception.Create('Absract class TWireConfig doesnt implement Constructor');
+end;
 procedure  TWireConfig.Load(Form: TForm);
 begin
   raise exception.Create('Absract class TWireConfig doesnt implement Load(Form)');

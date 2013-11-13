@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="35">
+    <Units Count="36">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="60" Y="11"/>
-        <UsageCount Value="81"/>
+        <UsageCount Value="82"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -25,10 +25,11 @@
         <UnitName Value="MainForm"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="50"/>
-        <CursorPos X="34" Y="68"/>
-        <UsageCount Value="81"/>
+        <TopLine Value="121"/>
+        <CursorPos X="21" Y="125"/>
+        <UsageCount Value="82"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="wireconfigs.pas"/>
@@ -37,8 +38,8 @@
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="15" Y="13"/>
-        <UsageCount Value="57"/>
+        <CursorPos X="25" Y="12"/>
+        <UsageCount Value="58"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -49,18 +50,19 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="48" Y="42"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="threeringsconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ThreeRingsConfig"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="87"/>
-        <CursorPos X="40" Y="313"/>
-        <UsageCount Value="40"/>
+        <TopLine Value="104"/>
+        <CursorPos X="31" Y="125"/>
+        <UsageCount Value="41"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -70,20 +72,19 @@
         <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="21" Y="19"/>
-        <UsageCount Value="40"/>
+        <CursorPos X="11" Y="25"/>
+        <UsageCount Value="41"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="parallelconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParallelConfig"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="65"/>
-        <CursorPos X="18" Y="107"/>
-        <UsageCount Value="24"/>
+        <TopLine Value="1"/>
+        <CursorPos X="42" Y="8"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -295,6 +296,14 @@
         <CursorPos X="1" Y="2182"/>
         <UsageCount Value="10"/>
       </Unit34>
+      <Unit35>
+        <Filename Value="..\..\..\AppData\Local\Temp\7zO8329.tmp\Unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="30" Y="17"/>
+        <UsageCount Value="10"/>
+      </Unit35>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
@@ -302,123 +311,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="mainform.pas"/>
-        <Caret Line="115" Column="1" TopLine="72"/>
+        <Caret Line="125" Column="1" TopLine="82"/>
       </Position1>
       <Position2>
         <Filename Value="mainform.pas"/>
-        <Caret Line="116" Column="1" TopLine="73"/>
+        <Caret Line="126" Column="1" TopLine="83"/>
       </Position2>
       <Position3>
         <Filename Value="mainform.pas"/>
-        <Caret Line="118" Column="1" TopLine="75"/>
+        <Caret Line="128" Column="1" TopLine="85"/>
       </Position3>
       <Position4>
         <Filename Value="mainform.pas"/>
-        <Caret Line="119" Column="1" TopLine="76"/>
+        <Caret Line="129" Column="1" TopLine="86"/>
       </Position4>
       <Position5>
         <Filename Value="mainform.pas"/>
-        <Caret Line="121" Column="1" TopLine="78"/>
+        <Caret Line="130" Column="1" TopLine="87"/>
       </Position5>
       <Position6>
         <Filename Value="mainform.pas"/>
-        <Caret Line="122" Column="1" TopLine="79"/>
+        <Caret Line="131" Column="1" TopLine="88"/>
       </Position6>
       <Position7>
         <Filename Value="mainform.pas"/>
-        <Caret Line="125" Column="1" TopLine="82"/>
+        <Caret Line="134" Column="1" TopLine="91"/>
       </Position7>
       <Position8>
         <Filename Value="mainform.pas"/>
-        <Caret Line="126" Column="1" TopLine="83"/>
+        <Caret Line="136" Column="1" TopLine="93"/>
       </Position8>
       <Position9>
         <Filename Value="mainform.pas"/>
-        <Caret Line="128" Column="1" TopLine="85"/>
+        <Caret Line="137" Column="1" TopLine="94"/>
       </Position9>
       <Position10>
         <Filename Value="mainform.pas"/>
-        <Caret Line="129" Column="1" TopLine="86"/>
+        <Caret Line="139" Column="1" TopLine="96"/>
       </Position10>
       <Position11>
         <Filename Value="mainform.pas"/>
-        <Caret Line="130" Column="1" TopLine="87"/>
+        <Caret Line="140" Column="1" TopLine="97"/>
       </Position11>
       <Position12>
         <Filename Value="mainform.pas"/>
-        <Caret Line="131" Column="1" TopLine="88"/>
+        <Caret Line="141" Column="1" TopLine="98"/>
       </Position12>
       <Position13>
         <Filename Value="mainform.pas"/>
-        <Caret Line="134" Column="1" TopLine="91"/>
+        <Caret Line="142" Column="1" TopLine="99"/>
       </Position13>
       <Position14>
         <Filename Value="mainform.pas"/>
-        <Caret Line="136" Column="1" TopLine="93"/>
+        <Caret Line="143" Column="1" TopLine="100"/>
       </Position14>
       <Position15>
         <Filename Value="mainform.pas"/>
-        <Caret Line="137" Column="1" TopLine="94"/>
+        <Caret Line="145" Column="1" TopLine="102"/>
       </Position15>
       <Position16>
         <Filename Value="mainform.pas"/>
-        <Caret Line="139" Column="1" TopLine="96"/>
+        <Caret Line="158" Column="38" TopLine="150"/>
       </Position16>
       <Position17>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="140" Column="1" TopLine="97"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="98" Column="26" TopLine="8"/>
       </Position17>
       <Position18>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="141" Column="1" TopLine="98"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="8" Column="39" TopLine="3"/>
       </Position18>
       <Position19>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="142" Column="1" TopLine="99"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="30" Column="19" TopLine="4"/>
       </Position19>
       <Position20>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="143" Column="1" TopLine="100"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="138" Column="36" TopLine="92"/>
       </Position20>
       <Position21>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="145" Column="1" TopLine="102"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="130" Column="1" TopLine="92"/>
       </Position21>
       <Position22>
         <Filename Value="mainform.pas"/>
-        <Caret Line="158" Column="38" TopLine="150"/>
+        <Caret Line="10" Column="9" TopLine="1"/>
       </Position22>
       <Position23>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="98" Column="26" TopLine="8"/>
-      </Position23>
-      <Position24>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="8" Column="39" TopLine="3"/>
-      </Position24>
-      <Position25>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="30" Column="19" TopLine="4"/>
-      </Position25>
-      <Position26>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="138" Column="36" TopLine="92"/>
-      </Position26>
-      <Position27>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="130" Column="1" TopLine="92"/>
-      </Position27>
-      <Position28>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="10" Column="9" TopLine="1"/>
-      </Position28>
-      <Position29>
         <Filename Value="wireconfigs.pas"/>
         <Caret Line="13" Column="42" TopLine="1"/>
-      </Position29>
-      <Position30>
+      </Position23>
+      <Position24>
         <Filename Value="wireconfigs.pas"/>
         <Caret Line="8" Column="63" TopLine="1"/>
+      </Position24>
+      <Position25>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="129" Column="26" TopLine="95"/>
+      </Position25>
+      <Position26>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="40" Column="3" TopLine="1"/>
+      </Position26>
+      <Position27>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="29" Column="46" TopLine="3"/>
+      </Position27>
+      <Position28>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="8" Column="32" TopLine="3"/>
+      </Position28>
+      <Position29>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="22" Column="30" TopLine="4"/>
+      </Position29>
+      <Position30>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="153" Column="55" TopLine="122"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

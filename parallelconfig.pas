@@ -5,7 +5,7 @@ unit ParallelConfig;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, Forms, wireconfig;
+  Classes, SysUtils, StdCtrls, ComCtrls, Forms, wireconfig;
   {$M+}
   type
   {TParallelConfig}
@@ -25,7 +25,7 @@ uses
     private
          X1, Y1, X2, Y2, Amperage1, Amperage2: real;
     public
-         constructor Create();
+         constructor Create(bar: TProgressBar);
          procedure Load(Form: TForm); override;
          function Calculate(x, y, z: real): boolean; override;
          procedure Reshape(); override;
@@ -34,8 +34,9 @@ uses
 
 implementation
 
-constructor TParallelConfig.Create();
+constructor TParallelConfig.Create(bar: TProgressBar);
 begin
+  ProgressBar := bar;
   LinesLength := 0;
 end;
 

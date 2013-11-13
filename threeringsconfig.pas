@@ -5,7 +5,7 @@ unit ThreeRingsConfig;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, Forms, Dialogs, GL, wireconfig;
+  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, wireconfig;
  {$M+}
  type
  {TThreeRingsConfig}
@@ -26,7 +26,7 @@ uses
          procedure RadiusEditUpdate(Sender: TObject);
 
   public
-         constructor Create();
+         constructor Create(bar: TProgressBar);
          procedure Load(Form: TForm); override;
          function Calculate(x, y, z: real): boolean; override;
          procedure Reshape(); override;
@@ -35,8 +35,9 @@ uses
 
 implementation
 
-constructor TThreeRingsConfig.Create();
+constructor TThreeRingsConfig.Create(bar: TProgressBar);
 begin
+  ProgressBar := bar;
   LinesLength := 0;
 end;
 
@@ -112,14 +113,16 @@ dx, dy, dz, l: extended;
 vt: vector3;
 fileVar:TextFile;
 begin
+  ProgressBar.Visible:=true;
   AssignFile(fileVar, 'Verts.txt');
   Rewrite(fileVar);
 
   Vectors[0].X := x;
   Vectors[0].Y := y;
   Vectors[0].Z := z;
-  for i := 1 to 10000 do begin
 
+  for i := 1 to 200000 do begin
+    ProgressBar.Position:= (i div 40);
     vt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
     {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
     writeln;}
@@ -166,6 +169,8 @@ begin
    DisplayLines := true;
    CloseFile(fileVar);
    Result := true;
+
+   ProgressBar.Visible := false;
 end;
 
 function TThreeRingsConfig.BField(x, y, z:extended):vector3;
