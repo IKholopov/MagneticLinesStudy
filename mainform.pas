@@ -27,13 +27,14 @@ type
     procedure FormResize(Sender: TObject);
     procedure OpenGLControllerPaint(Sender: TObject);
     procedure OpenGLControllerResize(Sender: TObject);
-    procedure DrawCoords();
+    procedure InitCoords();
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure CalculateClick(Sender: TObject);
     procedure IdleFunc(Sender: TObject; var Done: Boolean);
 
   private
     GLAreaInitialized: boolean;
+    Coords: GLuint;
   public
     constructor Create(TheOwner: TComponent); override;
     //destructor Destroy; override;
@@ -178,6 +179,7 @@ begin
       glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
       glLightfv(GL_LIGHT0, GL_POSITION, lights);
       glEnable(GL_LIGHTING);
+      InitCoords();
       Config.Reshape();
       glEnable(GL_LIGHT0);
       glMatrixMode(GL_MODELVIEW);
@@ -195,63 +197,80 @@ begin
     glMatrixMode(GL_MODELVIEW);
     Camera1.Update();
     glLightfv(GL_LIGHT0, GL_POSITION, lights);
-    DrawCoords();
+    glCallList(Coords);
     Config.DrawWire();
     OpenGLController.SwapBuffers;
   end;
 end;
 
-procedure TMainForm.DrawCoords();
+procedure TMainForm.InitCoords();
+const R = 0.25;
+   PositionArrow = 6.5;
+var i: integer;
+  x, y, z, angle: real;
 begin
+  Coords := glGenLists(1);
+  glNewList(Coords, GL_COMPILE);
   glBegin(GL_LINES);
-    //Z
+  //Z
     glColor3f(0.4,0,0.4 );
-    glVertex3f(0, 0, -50);
-    glVertex3f(0, 0, 50);
-    glVertex3f(0, 0.1, 3);
-    glVertex3f(0, 0, 3.5);
-    glVertex3f(0, -0.1, 3);
-    glVertex3f(0, 0, 3.5);
+    glVertex3f(0, 0, -1000);
+    glVertex3f(0, 0, 1000);
+  glEnd();
+  //Arrow
+  glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(0, 0, PositionArrow);
+    x := R;
+    y := 0;
+    angle := 0;
+    for i := 0 to 50 do begin
+       glVertex3f(x, y, PositionArrow - 1);
+       angle := angle + Pi /25;
+       x := R * cos(angle);
+       y := R * sin(angle);
+    end;
+  glEnd();
 
-    {glVertex3f(0, 0.3, 3.2);
-    glVertex3f(0, 0.3, 3.3);
-    glVertex3f(0, 0.3, 3.3);
-    glVertex3f(0, 0.2, 3.2);
-    glVertex3f(0, 0.2, 3.2);
-    glVertex3f(0, 0.2, 3.3);}
-
-    //Y
+  glBegin(GL_LINES);
+  //Y
     glColor3f(1,0.4,0 );
-    glVertex3f(0, -50, 0);
-    glVertex3f(0, 50, 0);
-    glVertex3f(0, 3, 0.1);
-    glVertex3f(0, 3.5, 0);
-    glVertex3f(0, 3, -0.1);
-    glVertex3f(0, 3.5, 0);
+    glVertex3f(0, -1000, 0);
+    glVertex3f(0, 1000, 0);
+  glEnd();
+  //Arrow
+  glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(0, PositionArrow, 0);
+    x := R;
+    z := 0;
+    angle := 0;
+    for i := 0 to 50 do begin
+       glVertex3f(x, PositionArrow - 1, z);
+       angle := angle + Pi /25;
+       x := R * cos(angle);
+       z := R * sin(angle);
+    end;
+  glEnd();
 
-    {glVertex3f(0, 3.8, -0.5);
-    glVertex3f(0, 3.6, -0.4);
-    glVertex3f(0, 3.6, -0.4);
-    glVertex3f(0, 3.8, -0.3);
-    glVertex3f(0, 3.6, -0.4);
-    glVertex3f(0, 3.4, -0.4);}
-
-    //X
+  glBegin(GL_LINES);
+  //X
     glColor3f(0.4,0.4,0 );
-    glVertex3f(-50, 0, 0);
-    glVertex3f(50, 0, 0);
-    glVertex3f(3, 0.1, 0);
-    glVertex3f(3.5, 0, 0);
-    glVertex3f(3, -0.1, 0);
-    glVertex3f(3.5, 0, 0);
-
-    {glVertex3f(0, 3.8, -0.5);
-    glVertex3f(0, 3.6, -0.4);
-    glVertex3f(0, 3.6, -0.4);
-    glVertex3f(0, 3.8, -0.3);
-    glVertex3f(0, 3.6, -0.4);
-    glVertex3f(0, 3.4, -0.4);}
-   glEnd;
+    glVertex3f(-1000, 0, 0);
+    glVertex3f(1000, 0, 0);
+  glEnd();
+  //Arrow
+  glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(PositionArrow, 0, 0);
+    y := R;
+    z := 0;
+    angle := 0;
+    for i := 0 to 50 do begin
+       glVertex3f(PositionArrow - 1, y, z);
+       angle := angle + Pi /25;
+       y := R * cos(angle);
+       z := R * sin(angle);
+    end;
+  glEnd();
+  glEndList();
 end;
 
 procedure TMainForm.OpenGLControllerResize(Sender: TObject);
