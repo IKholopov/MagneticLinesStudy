@@ -28,6 +28,8 @@ uses
   public
          constructor Create(bar: TProgressBar);
          procedure Load(Form: TForm); override;
+         procedure Show(); override;
+         procedure Hide(); override;
          function Calculate(x, y, z: real): boolean; override;
          procedure Reshape(); override;
          procedure DrawWire(); override;
@@ -89,6 +91,24 @@ begin
     SetBounds(70,90, 100, 40);
   end;
 end;
+procedure  TThreeRingsConfig.Show();
+  begin
+    RadiusLabel.Visible:=true;
+          EditRadius.Visible:=true;
+          AmperageLabel.Visible:=true;
+          EditI.Visible:=true;
+          DistanceLabel.Visible:=true;
+          DistanceEdit.Visible:=true;
+end;
+procedure  TThreeRingsConfig.Hide();
+begin
+    RadiusLabel.Visible:=false;
+    EditRadius.Visible:=false;
+    AmperageLabel.Visible:=false;
+    EditI.Visible:=false;
+    DistanceLabel.Visible:=false;
+    DistanceEdit.Visible:=false;
+end;
 
 procedure TThreeRingsConfig.RadiusEditUpdate(Sender: TObject);
 begin
@@ -122,7 +142,7 @@ begin
   Vectors[0].Z := z;
 
   for i := 1 to 200000 do begin
-    ProgressBar.Position:= (i div 40);
+    ProgressBar.Position:= (i div 2000);
     vt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
     {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
     writeln;}
@@ -148,6 +168,7 @@ begin
        (abs(Vectors[i].y - Vectors[0].y) < e) and
        (abs(Vectors[i].z - Vectors[0].z) < e) and
        (i > 150) then begin
+        ProgressBar.Position:= 100;
         showmessage('yes!');
         break;
       end;

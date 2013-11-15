@@ -25,6 +25,8 @@ type
         ProgressBar: TProgressBar;
         constructor Create(bar: TProgressBar);
         procedure Load(Form: TForm); virtual;
+        procedure Show(); virtual;
+        procedure Hide();virtual;
         function Calculate(x, y, z: real):boolean; virtual;
         procedure Reshape(); virtual;
         procedure DrawWire(); virtual;
@@ -42,7 +44,14 @@ procedure  TWireConfig.Load(Form: TForm);
 begin
   raise exception.Create('Absract class TWireConfig doesnt implement Load(Form)');
 end;
-
+procedure  TWireConfig.Show();
+  begin
+    raise exception.Create('Absract class TWireConfig doesnt implement Show(Form)');
+end;
+procedure  TWireConfig.Hide();
+begin
+    raise exception.Create('Absract class TWireConfig doesnt implement Hide(Form)');
+end;
 function TWireConfig.Calculate(x, y, z: real): boolean;
 begin
   raise exception.Create('Absract class TWireConfig doesnt implement Calculate()');

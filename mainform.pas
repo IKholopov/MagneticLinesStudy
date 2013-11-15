@@ -21,7 +21,7 @@ type
     ZCordEdit: TEdit;
     ProgressBar: TProgressBar;
     CalculateButton: TButton;
-    Config: TWireConfiguration;
+    ThreeRings, Parallel, Config: TWireConfiguration;
     Camera1: Camera;
 
     procedure FormResize(Sender: TObject);
@@ -31,13 +31,13 @@ type
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure CalculateClick(Sender: TObject);
     procedure IdleFunc(Sender: TObject; var Done: Boolean);
+    procedure OnChangeConfig(Sender: TObject);
 
   private
     GLAreaInitialized: boolean;
     Coords: GLuint;
   public
     constructor Create(TheOwner: TComponent); override;
-    //destructor Destroy; override;
   end;
 
 var
@@ -75,6 +75,7 @@ begin
     ItemIndex := 0;
     ReadOnly := True;
     Parent := Self;
+    OnChange := @OnChangeConfig;
   end;
 
   XLabel := TLabel.Create(Self);
@@ -147,11 +148,32 @@ begin
     OnResize := @OpenGLControllerResize;
   end;
 
-  Config := ThreeRingsConfiguration.Create(ProgressBar);
-  with Config do
+  ThreeRings := ThreeRingsConfiguration.Create(ProgressBar);
+  with ThreeRings do
   begin
     Load(Form1);
   end;
+  Parallel := ParallelConfiguration.Create(ProgressBar);
+  with Parallel do
+  begin
+    Load(Form1);
+    Hide();
+  end;
+  Config := ThreeRings;
+end;
+procedure TMainForm.OnChangeConfig(Sender: TObject);
+begin
+  Config.Hide();
+   if ConfigsComboBox.ItemIndex = 0 then
+   begin
+     Config := ThreeRings;
+     Config.Show();
+   end;
+   if ConfigsComboBox.ItemIndex = 1 then
+   begin
+     Config := Parallel;
+     Config.Show();
+   end;
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
