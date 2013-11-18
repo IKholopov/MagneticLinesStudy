@@ -1,0 +1,15 @@
+unit WireConfigs;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Forms, GL, wireconfig, threeringsconfig, parallelcongig;
+ {$M+}
+ type
+ TWireConfiguration = TWireConfig;
+ ThreeRingsConfiguration = TThreeRingsConfig;
+ ParallelConfiguration = TParallelConfig;
+ implementation
+ end.

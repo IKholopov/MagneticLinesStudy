@@ -195,7 +195,7 @@ begin
     begin
       glMatrixMode(GL_PROJECTION);
       glLoadIdentity();
-      glFrustum(-1.0, 1.0, -1.0, 1.0, 1, 100.0);
+      glFrustum(-1.0, 1.0, -1.0, 1.0, 1, 1000.0);
       glShadeModel (GL_SMOOTH);
       glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
       glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);

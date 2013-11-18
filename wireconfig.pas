@@ -8,8 +8,8 @@ uses
   Classes, SysUtils, Forms, ComCtrls, GL;
  {$M+}
 type
-  vector3 = record
-          X, Y, Z: extended;
+  vector4 = record
+          X, Y, Z, L: extended;
   end;
 
   TWireConfig = class(TObject)
@@ -20,7 +20,7 @@ type
         Lines: GLuint;
         LinesLength: integer;
         DisplayLines: boolean;
-        Vectors: array[0..200000] of vector3;
+        Vectors: array[0..200000] of vector4;
         VectorsLength: integer;
         ProgressBar: TProgressBar;
         constructor Create(bar: TProgressBar);
@@ -28,6 +28,7 @@ type
         procedure Show(); virtual;
         procedure Hide();virtual;
         function Calculate(x, y, z: real):boolean; virtual;
+        function BField(x, y, z:extended):vector4; virtual;
         procedure Reshape(); virtual;
         procedure DrawWire(); virtual;
   end;   
@@ -38,32 +39,36 @@ type
      {TWireConfig}
 constructor TWireConfig.Create(bar: TProgressBar);
 begin
-  raise exception.Create('Absract class TWireConfig doesnt implement Constructor');
+  raise exception.Create('Base class TWireConfig doesnt implement Constructor');
 end;
 procedure  TWireConfig.Load(Form: TForm);
 begin
-  raise exception.Create('Absract class TWireConfig doesnt implement Load(Form)');
+  raise exception.Create('Base class TWireConfig doesnt implement Load(Form)');
 end;
 procedure  TWireConfig.Show();
   begin
-    raise exception.Create('Absract class TWireConfig doesnt implement Show(Form)');
+    raise exception.Create('Base class TWireConfig doesnt implement Show(Form)');
 end;
 procedure  TWireConfig.Hide();
 begin
-    raise exception.Create('Absract class TWireConfig doesnt implement Hide(Form)');
+    raise exception.Create('Base class TWireConfig doesnt implement Hide(Form)');
 end;
 function TWireConfig.Calculate(x, y, z: real): boolean;
 begin
-  raise exception.Create('Absract class TWireConfig doesnt implement Calculate()');
+  raise exception.Create('Base class TWireConfig doesnt implement Calculate()');
+end;
+function TWireConfig.BField(x, y, z:extended):vector4;
+begin
+   raise exception.Create('Base class TWireConfig doesnt implement Create()');
 end;
 
 procedure  TWireConfig.DrawWire();
 begin
-  raise exception.Create('Absract class TWireConfig doesnt implement DrawWire()');
+  raise exception.Create('Base class TWireConfig doesnt implement DrawWire()');
 end;
 procedure  TWireConfig.Reshape();
 begin
-  raise exception.Create('Absract class TWireConfig doesnt implement Reshape()');
+  raise exception.Create('Base class TWireConfig doesnt implement Reshape()');
 end;
 
 end.
