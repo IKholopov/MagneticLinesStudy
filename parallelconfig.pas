@@ -284,7 +284,7 @@ begin
 
    ProgressBar.Visible := false;;
 end;
-function BField(x, y, z: extended):vector4;
+function TParallelConfig.BField(x, y, z: extended): vector4;
 var tx, ty, tz, m1, m2, r1, r2, lll: extended;
     v1, v2: vector4;
 begin
@@ -293,7 +293,7 @@ begin
   v1.y := tx;
   v1.x := -ty;
   r1 := sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1));
-  m1 := 4 * i1 / (2 * r1);
+  m1 := 4 * Amperage1 / (2 * r1);
   lll := sqrt(v1.x * v1.x + v1.y * v1.y);
   v1.x := m1 * (v1.x / lll);
   v1.y := m1 * (v1.y / lll);
@@ -304,7 +304,7 @@ begin
   v2.y := tx;
   v2.x := -ty;
   r2 := sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2));
-  m2 := 4 * i2 / (2 * r2);
+  m2 := 4 * Amperage2 / (2 * r2);
   lll := sqrt(v2.x * v2.x + v2.y * v2.y);
   v2.x := m2 * (v2.x / lll);
   v2.y := m2 * (v2.y / lll);
@@ -315,7 +315,6 @@ begin
   result.z := v1.z + v2.z;
   result.l := sqrt(result.x * result.x + result.y * result.y +
                                           result.z * result.z);
-
 end;
 
 procedure  TParallelConfig.Reshape();
@@ -335,6 +334,7 @@ end;
 procedure  TParallelConfig.DrawWire();
 begin
   glCallList(BaseGeometry);
+  glCallList(Lines);
 end;
 
 end.
