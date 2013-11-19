@@ -198,7 +198,7 @@ begin
 end;
 procedure TParallelConfig.I2Update(Sender: TObject);
 begin
-     TryStrToFloat(I2Edit.Text, Amperage1);
+     TryStrToFloat(I2Edit.Text, Amperage2);
      Reshape();
 end;
 

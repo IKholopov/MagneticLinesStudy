@@ -58,7 +58,7 @@
         <UnitName Value="ThreeRingsConfig"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="204"/>
+        <TopLine Value="214"/>
         <CursorPos X="17" Y="234"/>
         <FoldState Value=" T3pB0U+"/>
         <UsageCount Value="48"/>
@@ -82,8 +82,8 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="271"/>
-        <CursorPos X="13" Y="296"/>
+        <TopLine Value="280"/>
+        <CursorPos X="3" Y="316"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit6>
