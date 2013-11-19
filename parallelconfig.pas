@@ -36,7 +36,6 @@ uses
          procedure Load(Form: TForm); override;
          procedure Show(); override;
          procedure Hide(); override;
-         function Calculate(x, y, z: real): boolean; override;
          function BField(x, y, z: extended): vector4; override;
          procedure Reshape(); override;
          procedure DrawWire(); override;
@@ -202,88 +201,6 @@ begin
      Reshape();
 end;
 
-function TParallelConfig.Calculate(x, y, z: real): boolean;
-const h = 0.1; ex = 0.01; e = 0.1;
-var i: integer;
-k1, k2, k3, k4, l1, l2, l3, l4, m1, m2, m3, m4, dx, dy, dz, l: extended;
-Bt: vector4;
-fileVar:TextFile;
-begin
-  ProgressBar.Visible:=true;
-  AssignFile(fileVar, 'Verts.txt');
-  Rewrite(fileVar);
-
-  Vectors[0].X := x;
-  Vectors[0].Y := y;
-  Vectors[0].Z := z;
-
-  for i := 1 to 200000 do begin
-    ProgressBar.Position:= (i div 2000);
-    Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
-    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
-    writeln;}
-    k1 := h * bt.x / bt.l;
-    l1 := h * bt.y / bt.l;
-    m1 := h * bt.z / bt.l;
-
-    Bt := BField(Vectors[i - 1].X + (k1 / 2), Vectors[i - 1].y + (l1 / 2),
-                                    Vectors[i - 1].z + (m1 / 2));
-    k2 := h * bt.x / bt.l;
-    l2 := h * bt.y / bt.l;
-    m2 := h * bt.z / bt.l;
-
-    Bt := BField(Vectors[i - 1].X + (k2 / 2), Vectors[i - 1].y + (l2 / 2),
-                                    Vectors[i - 1].z + (m2 / 2));
-    k3 := h * bt.x / bt.l;
-    l3 := h * bt.y / bt.l;
-    m3 := h * bt.z / bt.l;
-
-    Bt := BField(Vectors[i - 1].X + (k3), Vectors[i - 1].y + (l3),
-                                    Vectors[i - 1].z + (m3));
-    k4 := h * bt.x / bt.l;
-    l4 := h * bt.y / bt.l;
-    m4 := h * bt.z / bt.l;
-
-    dx := (k1 + 2 * k2 + 2 * k3 + k4) / 6;
-    dy := (l1 + 2 * l2 + 2 * l3 + l4) / 6;
-    dz := (m1 + 2 * m2 + 2 * m3 + m4) / 6;
-
-    Vectors[i].X := Vectors[i - 1].X + dx;
-    Vectors[i].y := Vectors[i - 1].y + dy;
-    Vectors[i].z := Vectors[i - 1].z + dz;
- {   write((aofl[t].Nodes[i - 1].X + dx):20:20, ' ',
-          (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
-          (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
-    writeln; }
-    if (abs(Vectors[i].X - Vectors[0].X) < e) and
-       (abs(Vectors[i].y - Vectors[0].y) < e) and
-       (abs(Vectors[i].z - Vectors[0].z) < e) and
-       (i > 150) then begin
-        showmessage('This lines is closed!');
-        ProgressBar.Position:= 100;
-        break;
-      end;
-  end;
-   VectorsLength := i;
-
-   Lines := glGenLists(1);
-    glNewList(Lines, GL_COMPILE);
-    glBegin(GL_LINE_STRIP);
-    for i := 0 to VectorsLength do begin
-          glColor3f(0, 1, 1);
-          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
-    end;
-    glColor3f(0, 0, 1);
-          glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
-    glEnd();
-    glEndList();
-
-   DisplayLines := true;
-   CloseFile(fileVar);
-   Result := true;
-
-   ProgressBar.Visible := false;;
-end;
 function TParallelConfig.BField(x, y, z: extended): vector4;
 var tx, ty, tz, m1, m2, r1, r2, lll: extended;
     v1, v2: vector4;
@@ -318,17 +235,41 @@ begin
 end;
 
 procedure  TParallelConfig.Reshape();
+const length = 1000; edges = 50; radius = 0.25;
+var angle: real;
+    i,j:integer;
 begin
   BaseGeometry := glGenLists(1);
   glNewList(BaseGeometry, GL_COMPILE);
-      glBegin(GL_LINES);
+  angle := 0;
+  glBegin(GL_QUADS);
+  for i := 0 to edges do
+      begin
+        for j := (-length div 20) to (length div 20) do begin
+            glColor3f(0.6, 0.2, 1.0);
+            glVertex3f(X1 + radius * sin(angle), Y1 + radius * cos(angle), 20*j);
+            glVertex3f(X1 + radius * sin(angle + 2*Pi/edges), Y1 + radius * cos(angle + 2*Pi/edges), 20*j);
+            glVertex3f(X1 + radius * sin(angle + 2*Pi/edges), Y1 + radius * cos(angle + 2*Pi/edges), 20*(j+1));
+            glVertex3f(X1 + radius * sin(angle), Y1 + radius * cos(angle), 20*(j+1));
+
+            glColor3f(0.2, 1.0, 0.2);
+            glVertex3f(X2 + radius * sin(angle), Y2 + radius * cos(angle), 20*j);
+            glVertex3f(X2 + radius * sin(angle + 2*Pi/edges), Y2 + radius * cos(angle + 2*Pi/edges), 20*j);
+            glVertex3f(X2 + radius * sin(angle + 2*Pi/edges), Y2 + radius * cos(angle + 2*Pi/edges), 20*(j+1));
+            glVertex3f(X2 + radius * sin(angle), Y2 + radius * cos(angle), 20*(j+1));
+        end;
+        angle := angle + 2*Pi/edges;
+      end;
+  glEnd();
+
+      {glBegin(GL_LINES);
                        glColor3f(0.6, 0.2, 1.0);
                        glVertex3f(X1, Y1, 1000);
                        glVertex3f(X1, Y1, -1000);
                        glColor3f(0.2, 1.0, 0.2);
                        glVertex3f(X2, Y2, 1000);
                        glVertex3f(X2, Y2, -1000);
-      glEnd();
+      glEnd();}
   glEndList();
 end;
 procedure  TParallelConfig.DrawWire();

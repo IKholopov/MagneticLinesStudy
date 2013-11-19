@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="36">
+    <Units Count="37">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="45" Y="1"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="91"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -25,9 +25,9 @@
         <UnitName Value="MainForm"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="134"/>
-        <CursorPos X="13" Y="170"/>
-        <UsageCount Value="89"/>
+        <TopLine Value="256"/>
+        <CursorPos X="22" Y="291"/>
+        <UsageCount Value="91"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -38,7 +38,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="32" Y="14"/>
-        <UsageCount Value="65"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -49,7 +49,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="12"/>
         <CursorPos X="32" Y="28"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="72"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -58,10 +58,10 @@
         <UnitName Value="ThreeRingsConfig"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="214"/>
-        <CursorPos X="17" Y="234"/>
-        <FoldState Value=" T3pB0U+"/>
-        <UsageCount Value="48"/>
+        <TopLine Value="17"/>
+        <CursorPos X="37" Y="31"/>
+        <FoldState Value=" T3nD0Ut"/>
+        <UsageCount Value="50"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -70,9 +70,9 @@
         <UnitName Value="WireConfig"/>
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="23"/>
-        <CursorPos X="60" Y="31"/>
-        <UsageCount Value="48"/>
+        <TopLine Value="47"/>
+        <CursorPos X="19" Y="64"/>
+        <UsageCount Value="50"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -82,9 +82,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="280"/>
-        <CursorPos X="3" Y="316"/>
-        <UsageCount Value="32"/>
+        <TopLine Value="214"/>
+        <CursorPos X="103" Y="250"/>
+        <UsageCount Value="34"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -304,131 +304,135 @@
         <CursorPos X="30" Y="17"/>
         <UsageCount Value="10"/>
       </Unit35>
+      <Unit36>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\math.pp"/>
+        <UnitName Value="math"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="276"/>
+        <CursorPos X="13" Y="320"/>
+        <UsageCount Value="10"/>
+      </Unit36>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="38" Column="1" TopLine="12"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="287" Column="44" TopLine="253"/>
       </Position1>
       <Position2>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="33" Column="21" TopLine="1"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="8" Column="57" TopLine="1"/>
       </Position2>
       <Position3>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="318" Column="1" TopLine="242"/>
+        <Caret Line="287" Column="44" TopLine="261"/>
       </Position3>
       <Position4>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="40" Column="54" TopLine="15"/>
+        <Caret Line="289" Column="20" TopLine="263"/>
       </Position4>
       <Position5>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="262" Column="20" TopLine="237"/>
+        <Caret Line="291" Column="15" TopLine="264"/>
       </Position5>
       <Position6>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="287" Column="45" TopLine="262"/>
+        <Caret Line="289" Column="14" TopLine="263"/>
       </Position6>
       <Position7>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="212" Column="61" TopLine="184"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="291" Column="15" TopLine="265"/>
       </Position7>
       <Position8>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="33" Column="19" TopLine="7"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="292" Column="15" TopLine="266"/>
       </Position8>
       <Position9>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="38" Column="1" TopLine="12"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="291" Column="14" TopLine="245"/>
       </Position9>
       <Position10>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="287" Column="44" TopLine="253"/>
+        <Caret Line="295" Column="32" TopLine="269"/>
       </Position10>
       <Position11>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="8" Column="57" TopLine="1"/>
+        <Caret Line="26" Column="12" TopLine="17"/>
       </Position11>
       <Position12>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="287" Column="44" TopLine="261"/>
+        <Caret Line="205" Column="7" TopLine="157"/>
       </Position12>
       <Position13>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="289" Column="20" TopLine="263"/>
+        <Caret Line="306" Column="54" TopLine="280"/>
       </Position13>
       <Position14>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="291" Column="15" TopLine="264"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="33" Column="25" TopLine="14"/>
       </Position14>
       <Position15>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="289" Column="14" TopLine="263"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="145" Column="30" TopLine="108"/>
       </Position15>
       <Position16>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="291" Column="15" TopLine="265"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="146" Column="17" TopLine="108"/>
       </Position16>
       <Position17>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="292" Column="15" TopLine="266"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="153" Column="17" TopLine="109"/>
       </Position17>
       <Position18>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="291" Column="14" TopLine="245"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="159" Column="17" TopLine="115"/>
       </Position18>
       <Position19>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="295" Column="32" TopLine="269"/>
+        <Filename Value="threeringsconfig.pas"/>
+        <Caret Line="165" Column="17" TopLine="121"/>
       </Position19>
       <Position20>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="26" Column="12" TopLine="17"/>
+        <Caret Line="291" Column="8" TopLine="265"/>
       </Position20>
       <Position21>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="205" Column="7" TopLine="157"/>
+        <Caret Line="287" Column="26" TopLine="279"/>
       </Position21>
       <Position22>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="306" Column="54" TopLine="280"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="137" Column="33" TopLine="44"/>
       </Position22>
       <Position23>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="33" Column="25" TopLine="14"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="58" Column="3" TopLine="32"/>
       </Position23>
       <Position24>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="145" Column="30" TopLine="108"/>
+        <Filename Value="wireconfig.pas"/>
+        <Caret Line="56" Column="56" TopLine="32"/>
       </Position24>
       <Position25>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="146" Column="17" TopLine="108"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="265" Column="16" TopLine="215"/>
       </Position25>
       <Position26>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="153" Column="17" TopLine="109"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="252" Column="110" TopLine="220"/>
       </Position26>
       <Position27>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="159" Column="17" TopLine="115"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="249" Column="75" TopLine="223"/>
       </Position27>
       <Position28>
-        <Filename Value="threeringsconfig.pas"/>
-        <Caret Line="165" Column="17" TopLine="121"/>
+        <Filename Value="parallelconfig.pas"/>
+        <Caret Line="8" Column="17" TopLine="1"/>
       </Position28>
       <Position29>
         <Filename Value="parallelconfig.pas"/>
-        <Caret Line="291" Column="8" TopLine="265"/>
+        <Caret Line="249" Column="75" TopLine="1"/>
       </Position29>
-      <Position30>
-        <Filename Value="parallelconfig.pas"/>
-        <Caret Line="287" Column="26" TopLine="279"/>
-      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
