@@ -25,22 +25,14 @@ uses
          procedure RadiusEditUpdate(Sender: TObject);
 
   public
-         constructor Create(bar: TProgressBar);
          procedure Load(Form: TForm); override;
          procedure Show(); override;
          procedure Hide(); override;
          function BField(x, y, z: extended): vector4; override;
          procedure Reshape(); override;
-         procedure DrawWire(); override;
   end;
 
 implementation
-
-constructor TThreeRingsConfig.Create(bar: TProgressBar);
-begin
-  ProgressBar := bar;
-  LinesLength := 0;
-end;
 
 procedure  TThreeRingsConfig.Load(Form: TForm);
 begin
@@ -297,13 +289,6 @@ begin
        offset := offset + TorusDistance;
     end;
     glEndList();
-
-end;
-procedure  TThreeRingsConfig.DrawWire();
-begin
-    glCallList(BaseGeometry);
-    if DisplayLines then
-    glCallList(Lines);
 
 end;
 

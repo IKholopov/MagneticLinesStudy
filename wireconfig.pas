@@ -17,8 +17,8 @@ type
 
   public
         BaseGeometry: GLuint;
-        Lines: GLuint;
-        LinesLength: integer;
+        Lines: array[0..100] of GLuint;
+        CurrentLine: integer;
         DisplayLines: boolean;
         Vectors: array[0..200000] of vector4;
         VectorsLength: integer;
@@ -30,7 +30,8 @@ type
         function Calculate(x, y, z: real):boolean;
         function BField(x, y, z:extended):vector4; virtual;
         procedure Reshape(); virtual;
-        procedure DrawWire(); virtual;
+        procedure DrawWire();
+        procedure ResetLines();
   end;   
   
   implementation
@@ -39,7 +40,8 @@ type
      {TWireConfig}
 constructor TWireConfig.Create(bar: TProgressBar);
 begin
-  raise exception.Create('Base class TWireConfig doesnt implement Constructor');
+    CurrentLine := 0;
+    ProgressBar := bar;
 end;
 procedure  TWireConfig.Load(Form: TForm);
 begin
@@ -59,11 +61,12 @@ var i: integer;
 k1, k2, k3, k4, l1, l2, l3, l4, m1, m2, m3, m4, dx, dy, dz, l: extended;
 Bt: vector4;
 fileVar:TextFile;
+lineClosed:boolean;
 begin
   ProgressBar.Visible:=true;
   AssignFile(fileVar, 'Verts.txt');
   Rewrite(fileVar);
-
+  lineClosed := false;
   Vectors[0].X := x;
   Vectors[0].Y := y;
   Vectors[0].Z := z;
@@ -112,22 +115,26 @@ begin
        (i > 150) then begin
         showmessage('This lines is closed!');
         ProgressBar.Position:= 100;
+        lineClosed := true;
         break;
       end;
   end;
    VectorsLength := i;
-   Lines := glGenLists(1);
-    glNewList(Lines, GL_COMPILE);
+   Lines[CurrentLine] := glGenLists(1);
+    glNewList(Lines[CurrentLine], GL_COMPILE);
     glBegin(GL_LINE_STRIP);
     for i := 0 to VectorsLength do begin
           glColor3f(0, 1, 1);
           glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
     end;
-    glColor3f(0, 0, 1);
+    if lineClosed then begin
+          glColor3f(0, 0, 1);
           glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
+    end
+       else showmessage('Line is not closed!');
     glEnd();
     glEndList();
-
+   CurrentLine := CurrentLine + 1;
    DisplayLines := true;
    CloseFile(fileVar);
    Result := true;
@@ -140,12 +147,22 @@ begin
 end;
 
 procedure  TWireConfig.DrawWire();
+var i: integer;
 begin
-  raise exception.Create('Base class TWireConfig doesnt implement DrawWire()');
+     glCallList(BaseGeometry);
+     if CurrentLine > 0 then
+     for i := 0 to (CurrentLine - 1)  do begin
+              glCallList(Lines[i]);
+     end;
 end;
 procedure  TWireConfig.Reshape();
 begin
   raise exception.Create('Base class TWireConfig doesnt implement Reshape()');
+end;
+
+procedure  TWireConfig.ResetLines();
+begin
+     CurrentLine := 0;
 end;
 
 end.

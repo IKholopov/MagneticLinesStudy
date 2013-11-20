@@ -32,22 +32,14 @@ uses
          procedure I2Update(Sender: TObject);
 
     public
-         constructor Create(bar: TProgressBar);
          procedure Load(Form: TForm); override;
          procedure Show(); override;
          procedure Hide(); override;
          function BField(x, y, z: extended): vector4; override;
          procedure Reshape(); override;
-         procedure DrawWire(); override;
   end;
 
 implementation
-
-constructor TParallelConfig.Create(bar: TProgressBar);
-begin
-  ProgressBar := bar;
-  LinesLength := 0;
-end;
 
 procedure  TParallelConfig.Load(Form: TForm);
 begin
@@ -271,11 +263,6 @@ begin
                        glVertex3f(X2, Y2, -1000);
       glEnd();}
   glEndList();
-end;
-procedure  TParallelConfig.DrawWire();
-begin
-  glCallList(BaseGeometry);
-  glCallList(Lines);
 end;
 
 end.

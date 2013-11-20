@@ -21,6 +21,7 @@ type
     ZCordEdit: TEdit;
     ProgressBar: TProgressBar;
     CalculateButton: TButton;
+    ResetButton: TButton;
     ThreeRings, Parallel, Perpendicular, Config: TWireConfiguration;
     Camera1: Camera;
 
@@ -30,6 +31,7 @@ type
     procedure InitCoords();
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure CalculateClick(Sender: TObject);
+    procedure ResetClick(Sender: TObject);
     procedure IdleFunc(Sender: TObject; var Done: Boolean);
     procedure OnChangeConfig(Sender: TObject);
 
@@ -133,6 +135,14 @@ begin
     SetBounds(20, 450, 80, 30);
     Parent := Self;
     OnClick := @CalculateClick;
+  end;
+  ResetButton := TButton.Create(Self);
+  with ResetButton do
+  begin
+    Caption := 'Reset';
+    SetBounds(20, 550, 60, 30);
+    Parent := Self;
+    OnClick := @ResetClick;
   end;
 
   FormResize(Self);
@@ -335,6 +345,11 @@ var x, y, z: double;
 begin
       if TryStrToFloat(XCordEdit.Text,x) and TryStrToFloat(YCordEdit.Text,y) and TryStrToFloat(ZCordEdit.Text, z) then
       Config.Calculate(x, y, z);
+end;
+procedure TMainForm.ResetClick(Sender: TObject);
+var x, y, z: double;
+begin
+      Config.ResetLines();
 end;
 
 procedure TMainForm.IdleFunc(Sender: TObject; var Done: Boolean);
