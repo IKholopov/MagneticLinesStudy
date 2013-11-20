@@ -62,7 +62,6 @@ begin
     Parent := Form;
     SetBounds(70,30, 100, 40);
   end;
-
   AmperageLabel := TLabel.Create(Form);
   with AmperageLabel do begin
      Caption := 'Amperage:';

@@ -116,7 +116,6 @@ begin
       end;
   end;
    VectorsLength := i;
-
    Lines := glGenLists(1);
     glNewList(Lines, GL_COMPILE);
     glBegin(GL_LINE_STRIP);

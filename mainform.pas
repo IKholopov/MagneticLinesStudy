@@ -21,7 +21,7 @@ type
     ZCordEdit: TEdit;
     ProgressBar: TProgressBar;
     CalculateButton: TButton;
-    ThreeRings, Parallel, Config: TWireConfiguration;
+    ThreeRings, Parallel, Perpendicular, Config: TWireConfiguration;
     Camera1: Camera;
 
     procedure FormResize(Sender: TObject);
@@ -91,7 +91,6 @@ begin
     SetBounds(20, 350, 100, 40);
     Parent := Self;
   end;
-
   YLabel := TLabel.Create(Self);
   with YLabel do
   begin
@@ -159,6 +158,12 @@ begin
     Load(Form1);
     Hide();
   end;
+  Perpendicular := PerpendicularConfiguration.Create(ProgressBar);
+  with  Perpendicular do
+  begin
+    Load(Form1);
+    Hide();
+  end;
   Config := ThreeRings;
 end;
 procedure TMainForm.OnChangeConfig(Sender: TObject);
@@ -172,6 +177,11 @@ begin
    if ConfigsComboBox.ItemIndex = 1 then
    begin
      Config := Parallel;
+     Config.Show();
+   end;
+   if ConfigsComboBox.ItemIndex = 2 then
+   begin
+     Config := Perpendicular;
      Config.Show();
    end;
 end;
