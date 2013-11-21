@@ -161,7 +161,10 @@ begin
 end;
 
 procedure  TWireConfig.ResetLines();
+var i: integer;
 begin
+for i := 0 to CurrentLine do
+glDeleteLists(Lines[i], 1);
      CurrentLine := 0;
 end;
 
