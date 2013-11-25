@@ -5,12 +5,12 @@ unit PerpendicularConfig;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, wireconfig;
+  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, irregularwireConfig, vector4unit;
 
   {$M+}
 type
   {TPerpendicularConfig}
-  TPerpendicularConfig = class(TWireConfig)
+  TPerpendicularConfig = class(TIrregularWireConfig)
     X1Edit: TEdit;
     X1Label: TLabel;
     Y1Edit: TEdit;

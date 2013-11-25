@@ -5,11 +5,11 @@ unit ParallelConfig;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, wireconfig;
+  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, regularwireconfig, vector4unit;
   {$M+}
   type
   {TParallelConfig}
-  TParallelConfig = class(TWireConfig)
+  TParallelConfig = class(TRegularWireConfig)
     X1Edit: TEdit;
     X1Label: TLabel;
     Y1Edit: TEdit;

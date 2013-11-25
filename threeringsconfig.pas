@@ -5,11 +5,11 @@ unit ThreeRingsConfig;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, wireconfig;
+  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, regularwireconfig, vector4unit;
  {$M+}
  type
  {TThreeRingsConfig}
-  TThreeRingsConfig = class(TWireConfig)
+  TThreeRingsConfig = class(TRegularWireConfig)
           RadiusLabel:TLabel;
           EditRadius: TEdit;
           AmperageLabel:TLabel;

@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="8">
+    <Units Count="11">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -68,9 +68,9 @@
         <UnitName Value="ThreeRingsConfig"/>
       </Unit4>
       <Unit5>
-        <Filename Value="wireconfig.pas"/>
+        <Filename Value="regularwireconfig.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="WireConfig"/>
+        <UnitName Value="RegularWireConfig"/>
       </Unit5>
       <Unit6>
         <Filename Value="parallelconfig.pas"/>
@@ -82,6 +82,21 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="PerpendicularConfig"/>
       </Unit7>
+      <Unit8>
+        <Filename Value="wireconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="WireConfig"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="vector4unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="vector4unit"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="irregularwireconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="IrregularWireConfig"/>
+      </Unit10>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
