@@ -9,7 +9,7 @@ uses
  {$M+}
 type
   TIrregularWireConfig = class(TWireConfig)
-        const MAX_EDGES = 1000;
+        const MAX_EDGES = 20000;
   private
         line2index:integer;
   public
@@ -47,10 +47,8 @@ begin
   Vectors[0].Z := z;
 
   for i := 1 to MAX_EDGES do begin
-    {ProgressBar.Position:= (i div MAX_EDGES div 200);}
+    ProgressBar.Position:= (i div (MAX_EDGES div 200));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
-    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
-    writeln;}
     k1 := h * bt.x / bt.l;
     l1 := h * bt.y / bt.l;
     m1 := h * bt.z / bt.l;
@@ -80,10 +78,6 @@ begin
     Vectors[i].X := Vectors[i - 1].X + dx;
     Vectors[i].y := Vectors[i - 1].y + dy;
     Vectors[i].z := Vectors[i - 1].z + dz;
- {   write((aofl[t].Nodes[i - 1].X + dx):20:20, ' ',
-          (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
-          (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
-    writeln; }
     if (abs(Vectors[i].X - Vectors[0].X) < e) and
        (abs(Vectors[i].y - Vectors[0].y) < e) and
        (abs(Vectors[i].z - Vectors[0].z) < e) and
@@ -101,10 +95,8 @@ begin
          Vectors[line2index].y := y;
          Vectors[line2index].z := z;
          for i := line2index + 1 to 2*MAX_EDGES do begin
-    {ProgressBar.Position:= (i div MAX_EDGES div 200);}
+    ProgressBar.Position:= (i div (MAX_EDGES div 200));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
-    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
-    writeln;}
     k1 := h * bt.x / bt.l;
     l1 := h * bt.y / bt.l;
     m1 := h * bt.z / bt.l;
@@ -171,13 +163,9 @@ begin
        for i := 0 to MAX_EDGES do begin
           glColor3f(0, 1, 1);
           glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
-          if  i = MAX_EDGES then begin
-
-          showmessage(FloatToSTR(Vectors[i].X));
-          showmessage(FloatToSTR(Vectors[i].Y));
-          showmessage(FloatToSTR(Vectors[i].Z));
           end;
-          end;
+          glEnd();
+          glBegin(GL_LINE_STRIP);
        for i := line2index to VectorsLength do begin
           glColor3f(0, 1, 1);
           glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
@@ -193,10 +181,9 @@ begin
     glEndList();
    CurrentLine := CurrentLine + 1;
    DisplayLines := true;
-   {CloseFile(fileVar);}
    Result := true;
 
-{   ProgressBar.Visible := false;}
+  ProgressBar.Visible := false;
 end;
 
 procedure  TIrregularWireConfig.DrawWire();
