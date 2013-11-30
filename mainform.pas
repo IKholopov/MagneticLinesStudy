@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, LCLProc, LCLType, Forms, LResources, Buttons,
   StdCtrls, ExtCtrls, ComCtrls, Dialogs, Graphics, IntfGraphics, GL, FPimage, OpenGLContext,
-  WireConfigs, Cameras;
+  WireConfigs, Cameras, FormInterface;
 
 type
   TMainForm = class(TForm)
@@ -20,6 +20,9 @@ type
     ZLabel: TLabel;
     ZCordEdit: TEdit;
     ProgressBar: TProgressBar;
+    Message: TLabel;
+    StatusIcon:TImage;
+    FormGui: TFormInterface;
     CalculateButton: TButton;
     ResetButton: TButton;
     ThreeRings, Parallel, Perpendicular, Config: TWireConfiguration;
@@ -127,6 +130,18 @@ begin
     SetBounds(20,500, 80, 20);
     Visible := false;
   end;
+  Message := TLabel.Create(Self);
+  with Message do
+  begin
+    Parent := Self;
+    SetBounds (50, 600, 500, 200);
+  end;
+  StatusIcon := TImage.Create(Self);
+  with StatusIcon do begin
+    Parent := Self;
+    SetBounds (20, 600, 24, 24);
+  end;
+  FormGui := TFormInterface.Create(ProgressBar, Message, StatusIcon);
 
   CalculateButton := TButton.Create(Self);
   with CalculateButton do
@@ -157,18 +172,18 @@ begin
     OnResize := @OpenGLControllerResize;
   end;
 
-  ThreeRings := ThreeRingsConfiguration.Create(ProgressBar);
+  ThreeRings := ThreeRingsConfiguration.Create(FormGui);
   with ThreeRings do
   begin
     Load(Form1);
   end;
-  Parallel := ParallelConfiguration.Create(ProgressBar);
+  Parallel := ParallelConfiguration.Create(FormGui);
   with Parallel do
   begin
     Load(Form1);
     Hide();
   end;
-  Perpendicular := PerpendicularConfiguration.Create(ProgressBar);
+  Perpendicular := PerpendicularConfiguration.Create(FormGui);
   with  Perpendicular do
   begin
     Load(Form1);
@@ -332,11 +347,11 @@ begin
       Camera1.Rotate(0,5,0);
     if Key =  VK_UP then
        if (ssShift in Shift) or (ssCtrl in Shift)then
-          Camera1.Scale(0.3)
+          Camera1.Scale(1)
        else Camera1.Rotate(5,0,0);
     if Key =  VK_DOWN then
     if (ssShift in Shift) or (ssCtrl in Shift) then
-          Camera1.Scale(-0.3)
+          Camera1.Scale(-1)
     else Camera1.Rotate(-5,0,0);
 end;
 

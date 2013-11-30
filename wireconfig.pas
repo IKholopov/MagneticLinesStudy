@@ -5,10 +5,11 @@ unit WireConfig;
 interface
 
 uses
-  Classes, SysUtils, Forms, Dialogs, ComCtrls, GL, vector4unit;
+  Classes, SysUtils, Forms, Dialogs, ComCtrls, GL, vector4unit, forminterface;
  {$M+}
 type
   TWireConfig = class(TObject)
+                const MAX_EDGES = 200000;
   private
 
   public
@@ -16,10 +17,10 @@ type
         Lines: array[0..100] of GLuint;
         CurrentLine: integer;
         DisplayLines: boolean;
-        Vectors: array[0..200000] of vector4;
+        Vectors: array[0..2*MAX_EDGES] of vector4;
         VectorsLength: integer;
-        ProgressBar: TProgressBar;
-        constructor Create(bar: TProgressBar);
+        Gui: TFormInterface;
+        constructor Create(setGui: TFormInterface);
         procedure Load(Form: TForm); virtual;
         procedure Show(); virtual;
         procedure Hide();virtual;
@@ -34,7 +35,7 @@ type
 
 
      {TWireConfig}
-constructor TWireConfig.Create(bar: TProgressBar);
+constructor TWireConfig.Create(setGui: TFormInterface);
 begin
     raise exception.Create('Abstract class TWireConfig doesnt implement Constructor');
 end;

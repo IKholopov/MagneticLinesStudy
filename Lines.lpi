@@ -38,7 +38,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="11">
+    <Units Count="12">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -97,6 +97,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="IrregularWireConfig"/>
       </Unit10>
+      <Unit11>
+        <Filename Value="forminterface.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FormInterface"/>
+      </Unit11>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

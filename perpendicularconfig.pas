@@ -5,7 +5,7 @@ unit PerpendicularConfig;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, irregularwireConfig, vector4unit;
+  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, regularwireConfig, irregularwireConfig, vector4unit;
 
   {$M+}
 type

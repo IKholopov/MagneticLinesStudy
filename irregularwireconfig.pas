@@ -5,15 +5,16 @@ unit IrregularWireConfig;
 interface
 
 uses
-  Classes, SysUtils, Forms, Dialogs, ComCtrls, GL, wireconfig, vector4unit;
+  Classes, SysUtils, Forms, Dialogs, ComCtrls, GL, forminterface, wireconfig, vector4unit;
  {$M+}
 type
   TIrregularWireConfig = class(TWireConfig)
-        const MAX_EDGES = 20000;
+
   private
+        Line: GLuint;
         line2index:integer;
   public
-        constructor Create(bar: TProgressBar);
+        constructor Create(setGui: TFormInterface);
         function Calculate(x, y, z: real):boolean; override;
         procedure DrawWire(); override;
         procedure ResetLines(); override;
@@ -23,10 +24,10 @@ type
 
 
      {TIrregularWireConfig}
-constructor TIrregularWireConfig.Create(bar: TProgressBar);
+constructor TIrregularWireConfig.Create(setGui: TFormInterface);
 begin
     CurrentLine := 0;
-    ProgressBar := bar;
+    Gui := setGui;
 end;
 
 function TIrregularWireConfig.Calculate(x, y, z: real): boolean;
@@ -37,18 +38,17 @@ Bt: vector4;
 fileVar:TextFile;
 lineClosed:boolean;
 begin
-  ProgressBar.Visible:=true;
-  AssignFile(fileVar, 'Verts.txt');
-  Rewrite(fileVar);
+  Gui.StartProcess();
   lineClosed := false;
-  line2index := 0;
   Vectors[0].X := x;
   Vectors[0].Y := y;
   Vectors[0].Z := z;
 
   for i := 1 to MAX_EDGES do begin
-    ProgressBar.Position:= (i div (MAX_EDGES div 200));
+    Gui.UpdateProcess(i div (MAX_EDGES div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
+    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
+    writeln;}
     k1 := h * bt.x / bt.l;
     l1 := h * bt.y / bt.l;
     m1 := h * bt.z / bt.l;
@@ -78,25 +78,29 @@ begin
     Vectors[i].X := Vectors[i - 1].X + dx;
     Vectors[i].y := Vectors[i - 1].y + dy;
     Vectors[i].z := Vectors[i - 1].z + dz;
+ {   write((aofl[t].Nodes[i - 1].X + dx):20:20, ' ',
+          (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
+          (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
+    writeln; }
     if (abs(Vectors[i].X - Vectors[0].X) < e) and
        (abs(Vectors[i].y - Vectors[0].y) < e) and
        (abs(Vectors[i].z - Vectors[0].z) < e) and
        (i > 150) then begin
-        showmessage('This lines is closed!');
-        ProgressBar.Position:= 100;
+        Gui.ShowMessage('This lines is closed!', true);
+        Gui.StopProcess();
         lineClosed := true;
         break;
       end;
   end;
-  if lineClosed = false then
-     begin
-         line2index := i + 1;
-         Vectors[line2index].X := x;
-         Vectors[line2index].y := y;
-         Vectors[line2index].z := z;
-         for i := line2index + 1 to 2*MAX_EDGES do begin
-    ProgressBar.Position:= (i div (MAX_EDGES div 200));
+   if not lineClosed then begin
+       Vectors[MAX_EDGES + 1].X := x;
+       Vectors[MAX_EDGES + 1].Y := y;
+       Vectors[MAX_EDGES + 1].Z := z;
+       for i := MAX_EDGES + 2 to 2*MAX_EDGES do begin
+    Gui.UpdateProcess((i-(MAX_EDGES + 2)) div (MAX_EDGES div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
+    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
+    writeln;}
     k1 := h * bt.x / bt.l;
     l1 := h * bt.y / bt.l;
     m1 := h * bt.z / bt.l;
@@ -130,72 +134,74 @@ begin
           (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
           (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
     writeln; }
-             if (abs(Vectors[i].X - Vectors[line2index].X) < e) and
-             (abs(Vectors[i].y - Vectors[line2index].y) < e) and
-             (abs(Vectors[i].z - Vectors[line2index].z) < e) and
-             (i > line2Index + 20) then begin
-             showmessage('This lines is closed!');
-             showmessage(IntToStr(i));
-             ProgressBar.Position:= 100;
-                lineClosed := true;
-                break;
-                   end;
-          end;
-     end;
+    if (abs(Vectors[i].X - Vectors[0].X) < e) and
+       (abs(Vectors[i].y - Vectors[0].y) < e) and
+       (abs(Vectors[i].z - Vectors[0].z) < e) and
+       (i > MAX_EDGES + 150) then begin
+        Gui.ShowMessage('This lines is closed!',true);
+        Gui.StopProcess();
+        lineClosed := true;
+        break;
+      end;
+  end;
+   end;
    VectorsLength := i;
-   Lines[0] := glGenLists(1);
-    glNewList(Lines[0], GL_COMPILE);
-    if line2index = 0 then begin
-    glBegin(GL_LINE_STRIP);
-    for i := 0 to VectorsLength do begin
+   Lines[CurrentLine] := glGenLists(1);
+   glNewList(Lines[CurrentLine], GL_COMPILE);
+   if VectorsLength <= MAX_EDGES then
+    begin
+       glBegin(GL_LINE_STRIP);
+       for i := 0 to VectorsLength do begin
           glColor3f(0, 1, 1);
           glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
+          end;
+          glColor3f(0, 0, 1);
+          glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);;
+    glEnd();
+    end else begin
+      glBegin(GL_LINE_STRIP);
+      for i := 0 to MAX_EDGES do begin
+          glColor3f(0, 1, 1);
+          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
+          end;
+      glEnd();
+      glBegin(GL_LINE_STRIP);
+       for i := MAX_EDGES + 1  to VectorsLength do begin
+          glColor3f(0, 1, 1);
+          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
+          end;
+      if lineClosed then begin
+          glColor3f(0, 0, 1);
+          glVertex3f(Vectors[MAX_EDGES + 1].X, Vectors[MAX_EDGES + 1].Y, Vectors[MAX_EDGES + 1].Z);
+          end
+          else Gui.ShowMessage('This lines is not closed!',false);
+      glEnd();
     end;
-    if lineClosed then begin
-          glColor3f(0, 0, 1);
-          glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
-    end
-       else showmessage('Line is not closed!');
-    glEnd();
-    end
-       else begin
-           glBegin(GL_LINE_STRIP);
-       for i := 0 to MAX_EDGES do begin
-          glColor3f(0, 1, 1);
-          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
-          end;
-          glEnd();
-          glBegin(GL_LINE_STRIP);
-       for i := line2index to VectorsLength do begin
-          glColor3f(0, 1, 1);
-          glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
 
-          end;
-    if lineClosed then begin
-          glColor3f(0, 0, 1);
-          glVertex3f(Vectors[line2index].X, Vectors[line2index].Y, Vectors[line2index].Z);
-    end
-       else showmessage('Line is not closed!');
-    glEnd();
-       end;
     glEndList();
+   Gui.StopProcess();
    CurrentLine := CurrentLine + 1;
    DisplayLines := true;
    Result := true;
-
-  ProgressBar.Visible := false;
 end;
 
 procedure  TIrregularWireConfig.DrawWire();
 var i: integer;
 begin
      glCallList(BaseGeometry);
-     glCallList(Lines[0]);
+  if CurrentLine > 0 then
+    for i := 0 to (CurrentLine - 1) do
+    begin
+      glCallList(Lines[i]);
+    end;
 end;
 
 procedure  TIrregularWireConfig.ResetLines();
+var i: integer;
 begin
-glDeleteLists(Lines[0], 1);
+  for i := 0 to CurrentLine do
+      glDeleteLists(Lines[i], 1);
+    CurrentLine := 0;
 end;
 
 end.
