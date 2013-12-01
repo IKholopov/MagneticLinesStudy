@@ -25,7 +25,7 @@ type
     FormGui: TFormInterface;
     CalculateButton: TButton;
     ResetButton: TButton;
-    ThreeRings, Parallel, Perpendicular, Config: TWireConfiguration;
+    ThreeRings, Parallel, Perpendicular, WireAndCoil, Config: TWireConfiguration;
     Camera1: Camera;
 
     procedure FormResize(Sender: TObject);
@@ -189,11 +189,18 @@ begin
     Load(Form1);
     Hide();
   end;
+  WireAndCoil := WireAndCoilConfiguration.Create(FormGui);
+  with  WireAndCoil do
+  begin
+    Load(Form1);
+    Hide();
+  end;
   Config := ThreeRings;
 end;
 procedure TMainForm.OnChangeConfig(Sender: TObject);
 begin
   Config.Hide();
+  FormGui.ClearMessage();
    if ConfigsComboBox.ItemIndex = 0 then
    begin
      Config := ThreeRings;
@@ -207,6 +214,11 @@ begin
    if ConfigsComboBox.ItemIndex = 2 then
    begin
      Config := Perpendicular;
+     Config.Show();
+   end;
+   if ConfigsComboBox.ItemIndex = 3 then
+   begin
+     Config := WireAndCoil;
      Config.Show();
    end;
 end;

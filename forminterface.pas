@@ -19,6 +19,7 @@ type TFormInterface = class
      procedure StartProcess();
      procedure UpdateProcess(percentage: integer);
      procedure StopProcess();
+     procedure ClearMessage();
   end;
 implementation
      constructor TFormInterface.Create(setBar: TProgressBar; setLabel: TLabel; setIcon: TImage);
@@ -50,6 +51,11 @@ implementation
      procedure TFormInterface.StopProcess();
      begin
          bar.Visible:=false;
+     end;
+     procedure TFormInterface.ClearMessage();
+     begin
+         Icon.Picture.Clear;
+         Message.Caption := '';
      end;
 end.
 

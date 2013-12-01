@@ -134,9 +134,13 @@ begin
           (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
           (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
     writeln; }
-    if (abs(Vectors[i].X - Vectors[0].X) < e) and
+    if ((
+       (abs(Vectors[i].X - Vectors[0].X) < e) and
        (abs(Vectors[i].y - Vectors[0].y) < e) and
-       (abs(Vectors[i].z - Vectors[0].z) < e) and
+       (abs(Vectors[i].z - Vectors[0].z) < e)) or(
+       (abs(Vectors[i].X - Vectors[MAX_EDGES].X) < e) and
+       (abs(Vectors[i].y - Vectors[MAX_EDGES].y) < e) and
+       (abs(Vectors[i].z - Vectors[MAX_EDGES].z) < e))) and
        (i > MAX_EDGES + 150) then begin
         Gui.ShowMessage('This lines is closed!',true);
         Gui.StopProcess();
