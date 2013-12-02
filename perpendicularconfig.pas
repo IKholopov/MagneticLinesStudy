@@ -5,7 +5,7 @@ unit PerpendicularConfig;
 interface
 
 uses
-  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, regularwireConfig, irregularwireConfig, vector4unit;
+  Classes, SysUtils, StdCtrls, ComCtrls, Forms, Dialogs, GL, irregularwireConfig, vector4unit;
 
   {$M+}
 type
@@ -253,7 +253,7 @@ procedure TPerpendicularConfig.Reshape();
 const
   length = 1000;
   edges = 50;
-  radius = 0.25;
+  radius = 1;
 var
   angle: real;
   i, j: integer;

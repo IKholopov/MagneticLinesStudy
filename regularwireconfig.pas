@@ -113,7 +113,7 @@ begin
     glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
   end
   else
-    Gui.ShowMessage('This lines is not closed!', false);
+    Gui.ShowMessage('This line is not closed!', false);
   glEnd();
   glEndList();
   CurrentLine := CurrentLine + 1;

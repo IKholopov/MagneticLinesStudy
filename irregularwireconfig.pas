@@ -142,7 +142,7 @@ begin
        (abs(Vectors[i].y - Vectors[resolution].y) < e) and
        (abs(Vectors[i].z - Vectors[resolution].z) < e))) and
        (i > resolution + 150) then begin
-        Gui.ShowMessage('This lines is closed!',true);
+        Gui.ShowMessage('This line is closed!',true);
         Gui.StopProcess();
         lineClosed := true;
         break;
@@ -178,7 +178,7 @@ begin
           glColor3f(0, 0, 1);
           glVertex3f(Vectors[resolution + 1].X, Vectors[resolution + 1].Y, Vectors[resolution + 1].Z);
           end
-          else Gui.ShowMessage('This lines is not closed!',false);
+          else Gui.ShowMessage('This line is not closed!',false);
       glEnd();
     end;
 

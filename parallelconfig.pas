@@ -227,7 +227,7 @@ begin
 end;
 
 procedure  TParallelConfig.Reshape();
-const length = 1000; edges = 50; radius = 0.25;
+const length = 1000; edges = 50; radius = 1;
 var angle: real;
     i,j:integer;
 begin

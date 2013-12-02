@@ -248,7 +248,7 @@ end;
 
 //OpenGl
 procedure TMainForm.OpenGLControllerPaint(Sender: TObject);
-const lights: array[0..3] of GLfloat = (-2, 1, 4, 1);
+const lights: array[0..3] of GLfloat = (4,4, 10, 1);
    mat_specular: array[0..3] of GLfloat = (1.0, 1.0, 1.0, 1.0);
    mat_shininess: array[0..0] of GLfloat = (120.0);
 begin

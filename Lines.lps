@@ -9,7 +9,7 @@
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Lines"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="70" Y="12"/>
@@ -23,10 +23,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
-        <EditorIndex Value="0"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="74"/>
-        <CursorPos X="49" Y="121"/>
+        <TopLine Value="214"/>
+        <CursorPos X="55" Y="252"/>
         <UsageCount Value="120"/>
         <Loaded Value="True"/>
       </Unit1>
@@ -34,10 +35,10 @@
         <Filename Value="wireconfigs.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireConfigs"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="2" Y="11"/>
+        <CursorPos X="1" Y="1"/>
         <UsageCount Value="96"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -45,32 +46,28 @@
         <Filename Value="cameras.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Cameras"/>
-        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="8"/>
         <CursorPos X="23" Y="58"/>
         <UsageCount Value="101"/>
-        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="threeringsconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ThreeRingsConfig"/>
-        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="50"/>
         <CursorPos X="19" Y="77"/>
         <UsageCount Value="79"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="regularwireconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="RegularWireConfig"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="13"/>
-        <CursorPos X="52" Y="32"/>
+        <TopLine Value="67"/>
+        <CursorPos X="17" Y="77"/>
         <UsageCount Value="79"/>
         <Loaded Value="True"/>
       </Unit5>
@@ -79,18 +76,18 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParallelConfig"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="92" Y="8"/>
+        <TopLine Value="219"/>
+        <CursorPos X="29" Y="247"/>
         <UsageCount Value="63"/>
       </Unit6>
       <Unit7>
         <Filename Value="perpendicularconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="PerpendicularConfig"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="48"/>
-        <CursorPos X="22" Y="52"/>
+        <TopLine Value="8"/>
+        <CursorPos X="60" Y="8"/>
         <UsageCount Value="49"/>
         <Loaded Value="True"/>
       </Unit7>
@@ -98,32 +95,28 @@
         <Filename Value="wireconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireConfig"/>
-        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="11"/>
         <UsageCount Value="38"/>
-        <Loaded Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="vector4unit.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="vector4unit"/>
-        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="13" Y="17"/>
         <UsageCount Value="38"/>
-        <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="irregularwireconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="IrregularWireConfig"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3"/>
-        <CursorPos X="94" Y="179"/>
+        <TopLine Value="113"/>
+        <CursorPos X="35" Y="145"/>
         <UsageCount Value="37"/>
         <Loaded Value="True"/>
       </Unit10>
@@ -131,24 +124,19 @@
         <Filename Value="forminterface.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="FormInterface"/>
-        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="8"/>
         <CursorPos X="20" Y="55"/>
         <UsageCount Value="32"/>
-        <Loaded Value="True"/>
       </Unit11>
       <Unit12>
         <Filename Value="wireandcoil.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireAndCoil"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="49"/>
-        <CursorPos X="18" Y="49"/>
+        <CursorPos X="27" Y="60"/>
         <UsageCount Value="24"/>
-        <Loaded Value="True"/>
       </Unit12>
       <Unit13>
         <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
@@ -487,127 +475,63 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="14" HistoryIndex="13">
       <Position1>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
-      </Position1>
-      <Position2>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="16" Column="6" TopLine="1"/>
-      </Position2>
-      <Position3>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="193" Column="11" TopLine="177"/>
-      </Position3>
-      <Position4>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="34" Column="19" TopLine="16"/>
-      </Position4>
-      <Position5>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="193" Column="33" TopLine="177"/>
-      </Position5>
-      <Position6>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="166" Column="22" TopLine="160"/>
-      </Position6>
-      <Position7>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="192" Column="5" TopLine="172"/>
-      </Position7>
-      <Position8>
         <Filename Value="Lines.lpr"/>
         <Caret Line="23" Column="30" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="15" Column="42" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Lines.lpr"/>
+        <Caret Line="12" Column="42" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Lines.lpr"/>
+        <Caret Line="12" Column="42" TopLine="1"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Lines.lpr"/>
+        <Caret Line="22" Column="1" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Lines.lpr"/>
+        <Caret Line="12" Column="32" TopLine="1"/>
+      </Position7>
+      <Position8>
+        <Filename Value="wireconfigs.pas"/>
+        <Caret Line="11" Column="2" TopLine="1"/>
       </Position8>
       <Position9>
         <Filename Value="wireconfigs.pas"/>
-        <Caret Line="1" Column="1" TopLine="1"/>
+        <Caret Line="11" Column="2" TopLine="1"/>
       </Position9>
       <Position10>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="234" Column="22" TopLine="188"/>
+        <Filename Value="Lines.lpr"/>
+        <Caret Line="12" Column="70" TopLine="1"/>
       </Position10>
       <Position11>
         <Filename Value="wireconfigs.pas"/>
-        <Caret Line="15" Column="42" TopLine="1"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position11>
       <Position12>
         <Filename Value="Lines.lpr"/>
-        <Caret Line="12" Column="42" TopLine="1"/>
+        <Caret Line="12" Column="70" TopLine="1"/>
       </Position12>
       <Position13>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="127" Column="84" TopLine="113"/>
+        <Filename Value="perpendicularconfig.pas"/>
+        <Caret Line="8" Column="69" TopLine="1"/>
       </Position13>
       <Position14>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="230" Column="1" TopLine="211"/>
-      </Position14>
-      <Position15>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="223" Column="23" TopLine="211"/>
-      </Position15>
-      <Position16>
-        <Filename Value="wireandcoil.pas"/>
-        <Caret Line="201" Column="15" TopLine="184"/>
-      </Position16>
-      <Position17>
-        <Filename Value="Lines.lpr"/>
-        <Caret Line="12" Column="42" TopLine="1"/>
-      </Position17>
-      <Position18>
-        <Filename Value="Lines.lpr"/>
-        <Caret Line="22" Column="1" TopLine="1"/>
-      </Position18>
-      <Position19>
-        <Filename Value="Lines.lpr"/>
-        <Caret Line="12" Column="32" TopLine="1"/>
-      </Position19>
-      <Position20>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="387" Column="3" TopLine="350"/>
-      </Position20>
-      <Position21>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="30" Column="55" TopLine="5"/>
-      </Position21>
-      <Position22>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="11" Column="2" TopLine="1"/>
-      </Position22>
-      <Position23>
-        <Filename Value="wireconfig.pas"/>
-        <Caret Line="56" Column="68" TopLine="13"/>
-      </Position23>
-      <Position24>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="38" Column="29" TopLine="24"/>
-      </Position24>
-      <Position25>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="167" Column="27" TopLine="125"/>
-      </Position25>
-      <Position26>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="393" Column="43" TopLine="351"/>
-      </Position26>
-      <Position27>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="389" Column="17" TopLine="362"/>
-      </Position27>
-      <Position28>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="99" Column="52" TopLine="77"/>
-      </Position28>
-      <Position29>
-        <Filename Value="wireconfigs.pas"/>
-        <Caret Line="11" Column="2" TopLine="1"/>
-      </Position29>
-      <Position30>
         <Filename Value="Lines.lpr"/>
         <Caret Line="12" Column="70" TopLine="1"/>
-      </Position30>
+      </Position14>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
