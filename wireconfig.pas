@@ -25,6 +25,7 @@ type
         procedure Show(); virtual;
         procedure Hide();virtual;
         function Calculate(x, y, z: real):boolean; virtual;
+        function Calculate(x, y, z: real; resolution: integer):boolean; virtual;
         function BField(x, y, z:extended):vector4; virtual;
         procedure Reshape(); virtual;
         procedure DrawWire(); virtual;
@@ -50,6 +51,10 @@ end;
 procedure  TWireConfig.Hide();
 begin
     raise exception.Create('Abstract class TWireConfig doesnt implement Hide(Form)');
+end;
+function TWireConfig.Calculate(x, y, z: real; resolution: integer): boolean;
+begin
+  raise exception.Create('Abstract class TWireConfig doesnt implement Calculate(x, y, z: real)');
 end;
 function TWireConfig.Calculate(x, y, z: real): boolean;
 begin

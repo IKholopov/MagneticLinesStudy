@@ -46,7 +46,7 @@ begin
   RLabel := TLabel.Create(Form);
   with RLabel do
   begin
-    Caption := 'R:';
+    Caption := 'R';
     SetBounds(10, 37, 40, 40);
     Parent := Form;
   end;
@@ -61,7 +61,7 @@ begin
   I1Label := TLabel.Create(Form);
   with I1Label do
   begin
-    Caption := 'I1:';
+    Caption := 'I1';
     SetBounds(12, 81, 40, 40);
     Parent := Form;
   end;
@@ -76,7 +76,7 @@ begin
   I2Label := TLabel.Create(Form);
   with I2Label do
   begin
-    Caption := 'I2:';
+    Caption := 'I2';
     SetBounds(75, 79, 40, 40);
     Parent := Form;
   end;

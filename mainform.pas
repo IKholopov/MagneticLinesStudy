@@ -13,6 +13,8 @@ type
   TMainForm = class(TForm)
     OpenGLController: TOpenGLControl;
     ConfigsComboBox: TComboBox;
+    ResolutionLabel: TLabel;
+    ResolutionEdit: TEdit;
     XLabel: TLabel;
     XCordEdit: TEdit;
     YLabel: TLabel;
@@ -83,6 +85,20 @@ begin
     OnChange := @OnChangeConfig;
   end;
 
+  ResolutionLabel := TLabel.Create(Self);
+  with ResolutionLabel do
+  begin
+    Caption := 'Resolution:';
+    SetBounds(30, 290, 50, 40);
+    Parent := Self;
+  end;
+  ResolutionEdit := TEdit.Create(Self);
+  with ResolutionEdit do
+  begin
+    SetBounds(30, 310, 80, 40);
+    Text := FloatToStr(TWireConfiguration.MAX_EDGES);
+    Parent := Self;
+  end;
   XLabel := TLabel.Create(Self);
   with XLabel do
   begin
@@ -93,7 +109,7 @@ begin
   XCordEdit := TEdit.Create(Self);
   with XCordEdit do
   begin
-    SetBounds(20, 350, 100, 40);
+    SetBounds(25, 350, 100, 40);
     Parent := Self;
   end;
   YLabel := TLabel.Create(Self);
@@ -106,7 +122,7 @@ begin
   YCordEdit := TEdit.Create(Self);
   with YCordEdit do
   begin
-    SetBounds(20, 380, 100, 40);
+    SetBounds(25, 380, 100, 40);
     Parent := Self;
   end;
 
@@ -120,7 +136,7 @@ begin
   ZCordEdit := TEdit.Create(Self);
   with ZCordEdit do
   begin
-    SetBounds(20, 410, 100, 40);
+    SetBounds(25, 410, 100, 40);
     Parent := Self;
   end;
   ProgressBar := TProgressBar.Create(Self);
@@ -369,9 +385,16 @@ end;
 
 procedure TMainForm.CalculateClick(Sender: TObject);
 var x, y, z: double;
+  resolution: integer;
 begin
-      if TryStrToFloat(XCordEdit.Text,x) and TryStrToFloat(YCordEdit.Text,y) and TryStrToFloat(ZCordEdit.Text, z) then
-      Config.Calculate(x, y, z);
+  if TryStrToInt(ResolutionEdit.Text,resolution) then
+  begin
+      if TryStrToFloat(XCordEdit.Text,x) and TryStrToFloat(YCordEdit.Text,y) and TryStrToFloat(ZCordEdit.Text, z)
+      and (resolution  <= TWireConfiguration.MAX_EDGES) and (resolution  >= 100)then
+      Config.Calculate(x, y, z, resolution)
+      else FormGui.ShowMessage('Incorrect input!');
+  end
+  else FormGui.ShowMessage('Incorrect input!');
 end;
 procedure TMainForm.ResetClick(Sender: TObject);
 var x, y, z: double;

@@ -15,7 +15,7 @@ type
         line2index:integer;
   public
         constructor Create(setGui: TFormInterface);
-        function Calculate(x, y, z: real):boolean; override;
+        function Calculate(x, y, z: real; resolution: integer):boolean; override;
         procedure DrawWire(); override;
         procedure ResetLines(); override;
   end;
@@ -30,7 +30,7 @@ begin
     Gui := setGui;
 end;
 
-function TIrregularWireConfig.Calculate(x, y, z: real): boolean;
+function TIrregularWireConfig.Calculate(x, y, z: real; resolution: integer): boolean;
   const h = 0.1; ex = 0.01; e = 0.1;
 var i: integer;
 k1, k2, k3, k4, l1, l2, l3, l4, m1, m2, m3, m4, dx, dy, dz, l: extended;
@@ -44,8 +44,8 @@ begin
   Vectors[0].Y := y;
   Vectors[0].Z := z;
 
-  for i := 1 to MAX_EDGES do begin
-    Gui.UpdateProcess(i div (MAX_EDGES div 100));
+  for i := 1 to resolution do begin
+    Gui.UpdateProcess(i div (resolution div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
     {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
     writeln;}
@@ -93,11 +93,11 @@ begin
       end;
   end;
    if not lineClosed then begin
-       Vectors[MAX_EDGES + 1].X := x;
-       Vectors[MAX_EDGES + 1].Y := y;
-       Vectors[MAX_EDGES + 1].Z := z;
-       for i := MAX_EDGES + 2 to 2*MAX_EDGES do begin
-    Gui.UpdateProcess((i-(MAX_EDGES + 2)) div (MAX_EDGES div 100));
+       Vectors[resolution + 1].X := x;
+       Vectors[resolution + 1].Y := y;
+       Vectors[resolution + 1].Z := z;
+       for i := resolution + 2 to 2*resolution do begin
+    Gui.UpdateProcess((i-(resolution + 2)) div (resolution div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
     {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
     writeln;}
@@ -138,10 +138,10 @@ begin
        (abs(Vectors[i].X - Vectors[0].X) < e) and
        (abs(Vectors[i].y - Vectors[0].y) < e) and
        (abs(Vectors[i].z - Vectors[0].z) < e)) or(
-       (abs(Vectors[i].X - Vectors[MAX_EDGES].X) < e) and
-       (abs(Vectors[i].y - Vectors[MAX_EDGES].y) < e) and
-       (abs(Vectors[i].z - Vectors[MAX_EDGES].z) < e))) and
-       (i > MAX_EDGES + 150) then begin
+       (abs(Vectors[i].X - Vectors[resolution].X) < e) and
+       (abs(Vectors[i].y - Vectors[resolution].y) < e) and
+       (abs(Vectors[i].z - Vectors[resolution].z) < e))) and
+       (i > resolution + 150) then begin
         Gui.ShowMessage('This lines is closed!',true);
         Gui.StopProcess();
         lineClosed := true;
@@ -152,7 +152,7 @@ begin
    VectorsLength := i;
    Lines[CurrentLine] := glGenLists(1);
    glNewList(Lines[CurrentLine], GL_COMPILE);
-   if VectorsLength <= MAX_EDGES then
+   if VectorsLength <= resolution then
     begin
        glBegin(GL_LINE_STRIP);
        for i := 0 to VectorsLength do begin
@@ -164,19 +164,19 @@ begin
     glEnd();
     end else begin
       glBegin(GL_LINE_STRIP);
-      for i := 0 to MAX_EDGES do begin
+      for i := 0 to resolution do begin
           glColor3f(0, 1, 1);
           glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
           end;
       glEnd();
       glBegin(GL_LINE_STRIP);
-       for i := MAX_EDGES + 1  to VectorsLength do begin
+       for i := resolution + 1  to VectorsLength do begin
           glColor3f(0, 1, 1);
           glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
           end;
       if lineClosed then begin
           glColor3f(0, 0, 1);
-          glVertex3f(Vectors[MAX_EDGES + 1].X, Vectors[MAX_EDGES + 1].Y, Vectors[MAX_EDGES + 1].Z);
+          glVertex3f(Vectors[resolution + 1].X, Vectors[resolution + 1].Y, Vectors[resolution + 1].Z);
           end
           else Gui.ShowMessage('This lines is not closed!',false);
       glEnd();

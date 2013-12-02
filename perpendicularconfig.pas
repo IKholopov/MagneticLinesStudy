@@ -55,7 +55,7 @@ begin
   X1Label := TLabel.Create(Form);
   with X1Label do
   begin
-    Caption := 'X1:';
+    Caption := 'X1';
     SetBounds(10, 37, 40, 40);
     Parent := Form;
   end;
@@ -65,13 +65,13 @@ begin
     Text := FloatToStr(X1);
     OnChange := @X1Update;
     Parent := Form;
-    SetBounds(30, 35, 40, 40);
+    SetBounds(32, 35, 40, 40);
   end;
   Y1Label := TLabel.Create(Form);
   with Y1Label do
   begin
-    Caption := 'Y1:';
-    SetBounds(10, 59, 40, 40);
+    Caption := 'Y1';
+    SetBounds(10, 67, 40, 40);
     Parent := Form;
   end;
   Y1Edit := TEdit.Create(Form);
@@ -80,12 +80,12 @@ begin
     Text := FloatToStr(Y1);
     OnChange := @Y1Update;
     Parent := Form;
-    SetBounds(30, 57, 40, 40);
+    SetBounds(32, 65, 40, 40);
   end;
   X2Label := TLabel.Create(Form);
   with X2Label do
   begin
-    Caption := 'X2:';
+    Caption := 'X2';
     SetBounds(75, 37, 40, 40);
     Parent := Form;
   end;
@@ -95,13 +95,13 @@ begin
     Text := FloatToStr(X2);
     OnChange := @X2Update;
     Parent := Form;
-    SetBounds(92, 35, 40, 40);
+    SetBounds(98, 35, 40, 40);
   end;
   Z2Label := TLabel.Create(Form);
   with Z2Label do
   begin
-    Caption := 'Z2:';
-    SetBounds(75, 59, 40, 40);
+    Caption := 'Z2';
+    SetBounds(75, 67, 40, 40);
     Parent := Form;
   end;
   Z2Edit := TEdit.Create(Form);
@@ -110,13 +110,13 @@ begin
     Text := FloatToStr(Z2);
     OnChange := @Z2Update;
     Parent := Form;
-    SetBounds(92, 57, 40, 40);
+    SetBounds(98, 65, 40, 40);
   end;
   I1Label := TLabel.Create(Form);
   with I1Label do
   begin
-    Caption := 'I1:';
-    SetBounds(12, 81, 40, 40);
+    Caption := 'I1';
+    SetBounds(12, 97, 40, 40);
     Parent := Form;
   end;
   I1Edit := TEdit.Create(Form);
@@ -125,13 +125,13 @@ begin
     Text := FloatToStr(Amperage1);
     OnChange := @I1Update;
     Parent := Form;
-    SetBounds(30, 78, 40, 40);
+    SetBounds(32, 95, 40, 40);
   end;
   I2Label := TLabel.Create(Form);
   with I2Label do
   begin
-    Caption := 'I2:';
-    SetBounds(75, 79, 40, 40);
+    Caption := 'I2';
+    SetBounds(75, 97, 40, 40);
     Parent := Form;
   end;
   I2Edit := TEdit.Create(Form);
@@ -140,7 +140,7 @@ begin
     Text := FloatToStr(Amperage2);
     OnChange := @I2Update;
     Parent := Form;
-    SetBounds(92, 78, 40, 40);
+    SetBounds(98, 95, 40, 40);
   end;
 
 end;

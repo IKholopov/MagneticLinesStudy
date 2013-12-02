@@ -52,7 +52,7 @@ begin
     Text := FloatToStr(TorusRadius);
     OnChange := @RadiusEditUpdate;
     Parent := Form;
-    SetBounds(70,30, 100, 40);
+    SetBounds(90,30, 100, 40);
   end;
   AmperageLabel := TLabel.Create(Form);
   with AmperageLabel do begin
@@ -65,7 +65,7 @@ begin
     Text := FloatToStr(Amperage);
     Parent := Form;
     OnChange := @EditIUpdate;
-    SetBounds(70,60, 100, 40);
+    SetBounds(90,60, 100, 40);
   end;
   DistanceLabel := TLabel.Create(Form);
   with DistanceLabel do begin
@@ -78,7 +78,7 @@ begin
     Text := FloatToStr(TorusDistance);
     Parent := Form;
     OnChange := @DistanceEditUpdate;
-    SetBounds(70,90, 100, 40);
+    SetBounds(90,90, 100, 40);
   end;
 end;
 procedure  TThreeRingsConfig.Show();

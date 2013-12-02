@@ -14,7 +14,7 @@ type
 
   public
     constructor Create(setGui: TFormInterface);
-    function Calculate(x, y, z: real): boolean; override;
+    function Calculate(x, y, z: real; resolution: integer): boolean; override;
     procedure DrawWire(); override;
     procedure ResetLines(); override;
   end;
@@ -29,7 +29,7 @@ begin
   Gui := setGui;
 end;
 
-function TRegularWireConfig.Calculate(x, y, z: real): boolean;
+function TRegularWireConfig.Calculate(x, y, z: real; resolution: integer): boolean;
 const
   h = 0.1;
   ex = 0.01;
@@ -49,9 +49,9 @@ begin
   Vectors[0].Y := y;
   Vectors[0].Z := z;
 
-  for i := 1 to MAX_EDGES do
+  for i := 1 to resolution do
   begin
-    Gui.UpdateProcess(i div (MAX_EDGES div 100));
+    Gui.UpdateProcess(i div (resolution div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
     {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
     writeln;}
