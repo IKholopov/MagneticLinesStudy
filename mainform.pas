@@ -27,7 +27,8 @@ type
     FormGui: TFormInterface;
     CalculateButton: TButton;
     ResetButton: TButton;
-    ThreeRings, Parallel, Perpendicular, WireAndCoil, Config: TWireConfiguration;
+    ThreeRings, Parallel, Perpendicular, WireAndCoil, WireAngle,
+      Config: TWireConfiguration;
     Camera1: Camera;
 
     procedure FormResize(Sender: TObject);
@@ -73,6 +74,7 @@ begin
   Names.Add('Parallel');
   Names.Add('Perpendicular');
   Names.Add('Wire and coil');
+  Names.Add('Bent wire');
 
 
   ConfigsComboBox := TComboBox.Create(Self); //A selection of different configs
@@ -211,6 +213,12 @@ begin
     Load(Form1);
     Hide();
   end;
+  WireAngle := WireAngleConfiguration.Create(FormGui);
+  with  WireAngle do
+  begin
+    Load(Form1);
+    Hide();
+  end;
   Config := ThreeRings;
 end;
 procedure TMainForm.OnChangeConfig(Sender: TObject);
@@ -235,6 +243,11 @@ begin
    if ConfigsComboBox.ItemIndex = 3 then
    begin
      Config := WireAndCoil;
+     Config.Show();
+   end;
+   if ConfigsComboBox.ItemIndex = 4 then
+   begin
+     Config := WireAngle;
      Config.Show();
    end;
 end;

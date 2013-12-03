@@ -36,7 +36,7 @@ implementation
 
 procedure  TThreeRingsConfig.Load(Form: TForm);
 begin
-  Amperage := 0;
+  Amperage := 10;
   TorusRadius := 5;
   TorusDistance := 2;
   DisplayLines := false;

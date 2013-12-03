@@ -13,6 +13,7 @@ type
   private
 
   public
+    Position:vector4;
     constructor Create(setGui: TFormInterface);
     function Calculate(x, y, z: real; resolution: integer): boolean; override;
     procedure DrawWire(); override;
@@ -26,6 +27,9 @@ implementation
 constructor TRegularWireConfig.Create(setGui: TFormInterface);
 begin
   CurrentLine := 0;
+  Position.x := 0;
+  Position.y := 0;
+  Position.z := 0;
   Gui := setGui;
 end;
 
@@ -38,12 +42,9 @@ var
   i: integer;
   k1, k2, k3, k4, l1, l2, l3, l4, m1, m2, m3, m4, dx, dy, dz, l: extended;
   Bt: vector4;
-  fileVar: TextFile;
   lineClosed: boolean;
 begin
   Gui.StartProcess();
-  AssignFile(fileVar, 'Verts.txt');
-  Rewrite(fileVar);
   lineClosed := False;
   Vectors[0].X := x;
   Vectors[0].Y := y;
@@ -53,8 +54,6 @@ begin
   begin
     Gui.UpdateProcess(i div (resolution div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
-    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
-    writeln;}
     k1 := h * bt.x / bt.l;
     l1 := h * bt.y / bt.l;
     m1 := h * bt.z / bt.l;
@@ -84,10 +83,6 @@ begin
     Vectors[i].X := Vectors[i - 1].X + dx;
     Vectors[i].y := Vectors[i - 1].y + dy;
     Vectors[i].z := Vectors[i - 1].z + dz;
- {   write((aofl[t].Nodes[i - 1].X + dx):20:20, ' ',
-          (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
-          (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
-    writeln; }
     if (abs(Vectors[i].X - Vectors[0].X) < e) and
       (abs(Vectors[i].y - Vectors[0].y) < e) and
       (abs(Vectors[i].z - Vectors[0].z) < e) and (i > 150) then
@@ -105,12 +100,12 @@ begin
   for i := 0 to VectorsLength do
   begin
     glColor3f(0, 1, 1);
-    glVertex3f(Vectors[i].X, Vectors[i].Y, Vectors[i].Z);
+    glVertex3f(Vectors[i].X + Position.x, Vectors[i].Y + Position.y, Vectors[i].Z + Position.z);
   end;
   if lineClosed then
   begin
     glColor3f(0, 0, 1);
-    glVertex3f(Vectors[0].X, Vectors[0].Y, Vectors[0].Z);
+    glVertex3f(Vectors[0].X + Position.x, Vectors[0].Y + Position.y, Vectors[0].Z + Position.z);
   end
   else
     Gui.ShowMessage('This line is not closed!', false);
@@ -118,7 +113,6 @@ begin
   glEndList();
   CurrentLine := CurrentLine + 1;
   DisplayLines := True;
-  CloseFile(fileVar);
   Result := True;
 end;
 

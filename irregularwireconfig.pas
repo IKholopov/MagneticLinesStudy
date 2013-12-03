@@ -35,7 +35,6 @@ function TIrregularWireConfig.Calculate(x, y, z: real; resolution: integer): boo
 var i: integer;
 k1, k2, k3, k4, l1, l2, l3, l4, m1, m2, m3, m4, dx, dy, dz, l: extended;
 Bt: vector4;
-fileVar:TextFile;
 lineClosed:boolean;
 begin
   Gui.StartProcess();
@@ -47,8 +46,6 @@ begin
   for i := 1 to resolution do begin
     Gui.UpdateProcess(i div (resolution div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
-    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
-    writeln;}
     k1 := h * bt.x / bt.l;
     l1 := h * bt.y / bt.l;
     m1 := h * bt.z / bt.l;
@@ -78,10 +75,7 @@ begin
     Vectors[i].X := Vectors[i - 1].X + dx;
     Vectors[i].y := Vectors[i - 1].y + dy;
     Vectors[i].z := Vectors[i - 1].z + dz;
- {   write((aofl[t].Nodes[i - 1].X + dx):20:20, ' ',
-          (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
-          (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
-    writeln; }
+
     if (abs(Vectors[i].X - Vectors[0].X) < e) and
        (abs(Vectors[i].y - Vectors[0].y) < e) and
        (abs(Vectors[i].z - Vectors[0].z) < e) and
@@ -99,8 +93,6 @@ begin
        for i := resolution + 2 to 2*resolution do begin
     Gui.UpdateProcess((i-(resolution + 2)) div (resolution div 100));
     Bt := BField(Vectors[i - 1].X, Vectors[i - 1].y, Vectors[i - 1].z);
-    {write(vt.x:20:20, vt.y:20:20, vt.z:20:20);
-    writeln;}
     k1 := h * bt.x / bt.l;
     l1 := h * bt.y / bt.l;
     m1 := h * bt.z / bt.l;
@@ -130,10 +122,7 @@ begin
     Vectors[i].X := Vectors[i - 1].X - dx;
     Vectors[i].y := Vectors[i - 1].y - dy;
     Vectors[i].z := Vectors[i - 1].z - dz;
- {   write((aofl[t].Nodes[i - 1].X + dx):20:20, ' ',
-          (aofl[t].Nodes[i - 1].y + dy):20:20, ' ',
-          (aofl[t].Nodes[i - 1].z + dz):20:20, ' ');
-    writeln; }
+
     if ((
        (abs(Vectors[i].X - Vectors[0].X) < e) and
        (abs(Vectors[i].y - Vectors[0].y) < e) and

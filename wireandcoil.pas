@@ -38,8 +38,8 @@ implementation
 
 procedure TWireAndCoilConfig.Load(Form: TForm);
 begin
-  Amperage1 := 0;
-  Amperage2 := 0;
+  Amperage1 := 10;
+  Amperage2 := 10;
   Radius := 5;
   DisplayLines := False;
   Reshape();

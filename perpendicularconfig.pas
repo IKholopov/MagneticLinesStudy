@@ -44,8 +44,8 @@ implementation
 
 procedure TPerpendicularConfig.Load(Form: TForm);
 begin
-  Amperage1 := 0;
-  Amperage2 := 0;
+  Amperage1 := 10;
+  Amperage2 := 10;
   X1 := -5;
   Y1 := -5;
   X2 := 5;
@@ -253,7 +253,7 @@ procedure TPerpendicularConfig.Reshape();
 const
   length = 1000;
   edges = 50;
-  radius = 1;
+  radius = 0.5;
 var
   angle: real;
   i, j: integer;
