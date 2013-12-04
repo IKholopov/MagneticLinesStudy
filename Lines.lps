@@ -119,7 +119,7 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="166"/>
+        <TopLine Value="37"/>
         <CursorPos X="13" Y="37"/>
         <UsageCount Value="40"/>
         <Loaded Value="True"/>
@@ -145,339 +145,6 @@
         <Loaded Value="True"/>
       </Unit12>
       <Unit13>
-        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1455"/>
-        <CursorPos X="14" Y="1480"/>
-        <UsageCount Value="16"/>
-      </Unit13>
-      <Unit14>
-        <Filename Value="C:\lazarus\lcl\forms.pp"/>
-        <UnitName Value="Forms"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="741"/>
-        <CursorPos X="14" Y="757"/>
-        <UsageCount Value="15"/>
-      </Unit14>
-      <Unit15>
-        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1943"/>
-        <CursorPos X="27" Y="1966"/>
-        <UsageCount Value="6"/>
-      </Unit15>
-      <Unit16>
-        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2098"/>
-        <CursorPos X="1" Y="2112"/>
-        <UsageCount Value="10"/>
-      </Unit16>
-      <Unit17>
-        <Filename Value="C:\lazarus\lcl\lclproc.pas"/>
-        <UnitName Value="LCLProc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="7"/>
-      </Unit17>
-      <Unit18>
-        <Filename Value="C:\lazarus\lcl\controls.pp"/>
-        <UnitName Value="Controls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1490"/>
-        <CursorPos X="71" Y="1522"/>
-        <UsageCount Value="16"/>
-      </Unit18>
-      <Unit19>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpash.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="157"/>
-        <CursorPos X="8" Y="183"/>
-        <UsageCount Value="9"/>
-      </Unit19>
-      <Unit20>
-        <Filename Value="C:\lazarus\components\opengl\openglcontext.pas"/>
-        <UnitName Value="OpenGLContext"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="256"/>
-        <CursorPos X="19" Y="179"/>
-        <UsageCount Value="7"/>
-      </Unit20>
-      <Unit21>
-        <Filename Value="C:\lazarus\lcl\lcltype.pp"/>
-        <UnitName Value="LCLType"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="120"/>
-        <CursorPos X="16" Y="164"/>
-        <UsageCount Value="7"/>
-      </Unit21>
-      <Unit22>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\keybrdh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="3" Y="22"/>
-        <UsageCount Value="7"/>
-      </Unit22>
-      <Unit23>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\keyboard.pp"/>
-        <UnitName Value="Keyboard"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="129"/>
-        <CursorPos X="50" Y="170"/>
-        <UsageCount Value="7"/>
-      </Unit23>
-      <Unit24>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\wininc\struct.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="3947"/>
-        <CursorPos X="19" Y="3973"/>
-        <UsageCount Value="7"/>
-      </Unit24>
-      <Unit25>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\opengl\src\gl.pp"/>
-        <UnitName Value="GL"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1196"/>
-        <CursorPos X="3" Y="1222"/>
-        <UsageCount Value="13"/>
-      </Unit25>
-      <Unit26>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\opengl\src\glu.pp"/>
-        <UnitName Value="glu"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="7"/>
-      </Unit26>
-      <Unit27>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\classes\classesh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="94"/>
-        <CursorPos X="3" Y="120"/>
-        <UsageCount Value="7"/>
-      </Unit27>
-      <Unit28>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysstrh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="56"/>
-        <CursorPos X="10" Y="175"/>
-        <UsageCount Value="9"/>
-      </Unit28>
-      <Unit29>
-        <Filename Value="threeringsconfiguration.pas"/>
-        <UnitName Value="ThreeRingsConfiguration"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="19"/>
-      </Unit29>
-      <Unit30>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysutilh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="10"/>
-        <CursorPos X="4" Y="36"/>
-        <UsageCount Value="8"/>
-      </Unit30>
-      <Unit31>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\systemh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="353"/>
-        <CursorPos X="3" Y="379"/>
-        <UsageCount Value="8"/>
-      </Unit31>
-      <Unit32>
-        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
-        <UnitName Value="Graphics"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="151"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="12"/>
-      </Unit32>
-      <Unit33>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\objpas.pp"/>
-        <UnitName Value="objpas"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2"/>
-        <CursorPos X="8" Y="28"/>
-        <UsageCount Value="9"/>
-      </Unit33>
-      <Unit34>
-        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="5319"/>
-        <CursorPos X="1" Y="5333"/>
-        <UsageCount Value="10"/>
-      </Unit34>
-      <Unit35>
-        <Filename Value="C:\lazarus\lcl\include\customcontrol.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="73"/>
-        <CursorPos X="1" Y="99"/>
-        <UsageCount Value="9"/>
-      </Unit35>
-      <Unit36>
-        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2561"/>
-        <CursorPos X="1" Y="2585"/>
-        <UsageCount Value="10"/>
-      </Unit36>
-      <Unit37>
-        <Filename Value="C:\usr\lib\fpc\src\rtl\objpas\sysutils\sysstrh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="124"/>
-        <CursorPos X="10" Y="167"/>
-        <UsageCount Value="9"/>
-      </Unit37>
-      <Unit38>
-        <Filename Value="C:\lazarus\lcl\include\customlabel.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="181"/>
-        <CursorPos X="1" Y="218"/>
-        <UsageCount Value="9"/>
-      </Unit38>
-      <Unit39>
-        <Filename Value="C:\lazarus\lcl\lclclasses.pp"/>
-        <UnitName Value="LCLClasses"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="143"/>
-        <CursorPos X="1" Y="159"/>
-        <UsageCount Value="10"/>
-      </Unit39>
-      <Unit40>
-        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2141"/>
-        <CursorPos X="1" Y="2182"/>
-        <UsageCount Value="9"/>
-      </Unit40>
-      <Unit41>
-        <Filename Value="..\..\..\AppData\Local\Temp\7zO8329.tmp\Unit1.pas"/>
-        <UnitName Value="Unit1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="30" Y="17"/>
-        <UsageCount Value="9"/>
-      </Unit41>
-      <Unit42>
-        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\math.pp"/>
-        <UnitName Value="math"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="276"/>
-        <CursorPos X="13" Y="320"/>
-        <UsageCount Value="9"/>
-      </Unit42>
-      <Unit43>
-        <Filename Value="C:\lazarus\components\lazutils\ttmemory.pas"/>
-        <UnitName Value="TTMemory"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="195"/>
-        <CursorPos X="4" Y="221"/>
-        <UsageCount Value="9"/>
-      </Unit43>
-      <Unit44>
-        <Filename Value="C:\Downloads\Kholopov11_2.pas"/>
-        <UnitName Value="Shooting"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="21" Y="29"/>
-        <UsageCount Value="9"/>
-      </Unit44>
-      <Unit45>
-        <Filename Value="C:\Downloads\kholopov-igor-11-2.pas"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
-      </Unit45>
-      <Unit46>
-        <Filename Value="..\..\..\AppData\Local\Temp\7zO75DE.tmp\Unit1.pas"/>
-        <UnitName Value="Unit1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="249"/>
-        <CursorPos X="11" Y="261"/>
-        <UsageCount Value="9"/>
-      </Unit46>
-      <Unit47>
-        <Filename Value="..\..\..\AppData\Local\Temp\7zO2004.tmp\Unit1.pas"/>
-        <UnitName Value="Unit1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="191"/>
-        <CursorPos X="53" Y="201"/>
-        <UsageCount Value="9"/>
-      </Unit47>
-      <Unit48>
-        <Filename Value="..\..\..\AppData\Local\Temp\7zO852E.tmp\Unit1.pas"/>
-        <UnitName Value="Unit1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="188"/>
-        <CursorPos X="26" Y="208"/>
-        <UsageCount Value="9"/>
-      </Unit48>
-      <Unit49>
-        <Filename Value="C:\lazarus\lcl\dialogs.pp"/>
-        <UnitName Value="Dialogs"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="54"/>
-        <CursorPos X="21" Y="80"/>
-        <UsageCount Value="10"/>
-      </Unit49>
-      <Unit50>
-        <Filename Value="C:\lazarus\lcl\include\progressbar.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="110"/>
-        <CursorPos X="9" Y="178"/>
-        <UsageCount Value="10"/>
-      </Unit50>
-      <Unit51>
-        <Filename Value="C:\lazarus\lcl\comctrls.pp"/>
-        <UnitName Value="ComCtrls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1583"/>
-        <CursorPos X="5" Y="1609"/>
-        <UsageCount Value="10"/>
-      </Unit51>
-      <Unit52>
-        <Filename Value="C:\lazarus\lcl\include\buttoncontrol.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="12"/>
-        <CursorPos X="1" Y="27"/>
-        <UsageCount Value="10"/>
-      </Unit52>
-      <Unit53>
-        <Filename Value="C:\lazarus\lcl\include\buttons.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="331"/>
-        <CursorPos X="1" Y="356"/>
-        <UsageCount Value="10"/>
-      </Unit53>
-      <Unit54>
-        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
-        <UnitName Value="LCLMessageGlue"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="110"/>
-        <CursorPos X="1" Y="128"/>
-        <UsageCount Value="10"/>
-      </Unit54>
-      <Unit55>
-        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
-        <UnitName Value="Win32WSForms"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="16"/>
-        <CursorPos X="29" Y="365"/>
-        <UsageCount Value="10"/>
-      </Unit55>
-      <Unit56>
-        <Filename Value="..\..\..\AppData\Local\Temp\7zOE67D.tmp\Unit1.pas"/>
-        <UnitName Value="Unit1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="323"/>
-        <CursorPos X="32" Y="332"/>
-        <UsageCount Value="11"/>
-      </Unit56>
-      <Unit57>
         <Filename Value="wireangleconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireAngleConfig"/>
@@ -487,12 +154,345 @@
         <CursorPos X="47" Y="74"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1455"/>
+        <CursorPos X="14" Y="1480"/>
+        <UsageCount Value="16"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="741"/>
+        <CursorPos X="14" Y="757"/>
+        <UsageCount Value="15"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1943"/>
+        <CursorPos X="27" Y="1966"/>
+        <UsageCount Value="6"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2098"/>
+        <CursorPos X="1" Y="2112"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\lcl\lclproc.pas"/>
+        <UnitName Value="LCLProc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="7"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1490"/>
+        <CursorPos X="71" Y="1522"/>
+        <UsageCount Value="16"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpash.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="157"/>
+        <CursorPos X="8" Y="183"/>
+        <UsageCount Value="9"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus\components\opengl\openglcontext.pas"/>
+        <UnitName Value="OpenGLContext"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="256"/>
+        <CursorPos X="19" Y="179"/>
+        <UsageCount Value="7"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\lazarus\lcl\lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="120"/>
+        <CursorPos X="16" Y="164"/>
+        <UsageCount Value="7"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\keybrdh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="3" Y="22"/>
+        <UsageCount Value="7"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\keyboard.pp"/>
+        <UnitName Value="Keyboard"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="129"/>
+        <CursorPos X="50" Y="170"/>
+        <UsageCount Value="7"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\win\wininc\struct.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3947"/>
+        <CursorPos X="19" Y="3973"/>
+        <UsageCount Value="7"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\opengl\src\gl.pp"/>
+        <UnitName Value="GL"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1196"/>
+        <CursorPos X="3" Y="1222"/>
+        <UsageCount Value="13"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\opengl\src\glu.pp"/>
+        <UnitName Value="glu"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="7"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\classes\classesh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="94"/>
+        <CursorPos X="3" Y="120"/>
+        <UsageCount Value="7"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysstrh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="10" Y="175"/>
+        <UsageCount Value="9"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="threeringsconfiguration.pas"/>
+        <UnitName Value="ThreeRingsConfiguration"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="19"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\sysutils\sysutilh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="4" Y="36"/>
+        <UsageCount Value="8"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\systemh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="353"/>
+        <CursorPos X="3" Y="379"/>
+        <UsageCount Value="8"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="151"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="12"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\objpas.pp"/>
+        <UnitName Value="objpas"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2"/>
+        <CursorPos X="8" Y="28"/>
+        <UsageCount Value="9"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="5319"/>
+        <CursorPos X="1" Y="5333"/>
+        <UsageCount Value="10"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\lazarus\lcl\include\customcontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="73"/>
+        <CursorPos X="1" Y="99"/>
+        <UsageCount Value="9"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2561"/>
+        <CursorPos X="1" Y="2585"/>
+        <UsageCount Value="10"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\usr\lib\fpc\src\rtl\objpas\sysutils\sysstrh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="124"/>
+        <CursorPos X="10" Y="167"/>
+        <UsageCount Value="9"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="C:\lazarus\lcl\include\customlabel.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="181"/>
+        <CursorPos X="1" Y="218"/>
+        <UsageCount Value="9"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="C:\lazarus\lcl\lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="143"/>
+        <CursorPos X="1" Y="159"/>
+        <UsageCount Value="10"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2141"/>
+        <CursorPos X="1" Y="2182"/>
+        <UsageCount Value="9"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="..\..\..\AppData\Local\Temp\7zO8329.tmp\Unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="30" Y="17"/>
+        <UsageCount Value="9"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\math.pp"/>
+        <UnitName Value="math"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="276"/>
+        <CursorPos X="13" Y="320"/>
+        <UsageCount Value="9"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="C:\lazarus\components\lazutils\ttmemory.pas"/>
+        <UnitName Value="TTMemory"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="195"/>
+        <CursorPos X="4" Y="221"/>
+        <UsageCount Value="9"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="C:\Downloads\Kholopov11_2.pas"/>
+        <UnitName Value="Shooting"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="21" Y="29"/>
+        <UsageCount Value="9"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="C:\Downloads\kholopov-igor-11-2.pas"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="9"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="..\..\..\AppData\Local\Temp\7zO75DE.tmp\Unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="249"/>
+        <CursorPos X="11" Y="261"/>
+        <UsageCount Value="9"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\..\..\AppData\Local\Temp\7zO2004.tmp\Unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="191"/>
+        <CursorPos X="53" Y="201"/>
+        <UsageCount Value="9"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="..\..\..\AppData\Local\Temp\7zO852E.tmp\Unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="188"/>
+        <CursorPos X="26" Y="208"/>
+        <UsageCount Value="9"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="C:\lazarus\lcl\dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="54"/>
+        <CursorPos X="21" Y="80"/>
+        <UsageCount Value="10"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="C:\lazarus\lcl\include\progressbar.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="110"/>
+        <CursorPos X="9" Y="178"/>
+        <UsageCount Value="10"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="C:\lazarus\lcl\comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1583"/>
+        <CursorPos X="5" Y="1609"/>
+        <UsageCount Value="10"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="C:\lazarus\lcl\include\buttoncontrol.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="12"/>
+        <CursorPos X="1" Y="27"/>
+        <UsageCount Value="10"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="C:\lazarus\lcl\include\buttons.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="331"/>
+        <CursorPos X="1" Y="356"/>
+        <UsageCount Value="10"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="110"/>
+        <CursorPos X="1" Y="128"/>
+        <UsageCount Value="10"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
+        <UnitName Value="Win32WSForms"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="16"/>
+        <CursorPos X="29" Y="365"/>
+        <UsageCount Value="10"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\..\..\AppData\Local\Temp\7zOE67D.tmp\Unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="323"/>
+        <CursorPos X="32" Y="332"/>
+        <UsageCount Value="11"/>
       </Unit57>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="Lines.lpr"/>
         <Caret Line="12" Column="42" TopLine="1"/>
@@ -547,72 +547,64 @@
       </Position13>
       <Position14>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="72" Column="28" TopLine="76"/>
+        <Caret Line="99" Column="24" TopLine="80"/>
       </Position14>
       <Position15>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="99" Column="24" TopLine="80"/>
+        <Caret Line="75" Column="15" TopLine="74"/>
       </Position15>
       <Position16>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="75" Column="15" TopLine="74"/>
+        <Caret Line="103" Column="13" TopLine="85"/>
       </Position16>
       <Position17>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="103" Column="13" TopLine="85"/>
+        <Caret Line="104" Column="31" TopLine="89"/>
       </Position17>
       <Position18>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="104" Column="31" TopLine="89"/>
+        <Caret Line="106" Column="22" TopLine="90"/>
       </Position18>
       <Position19>
-        <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="106" Column="22" TopLine="90"/>
-      </Position19>
-      <Position20>
         <Filename Value="wireconfigs.pas"/>
         <Caret Line="16" Column="27" TopLine="1"/>
+      </Position19>
+      <Position20>
+        <Filename Value="wireangleconfig.pas"/>
+        <Caret Line="82" Column="2" TopLine="68"/>
       </Position20>
       <Position21>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="82" Column="2" TopLine="68"/>
+        <Caret Line="75" Column="43" TopLine="66"/>
       </Position21>
       <Position22>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="75" Column="43" TopLine="66"/>
+        <Caret Line="75" Column="44" TopLine="59"/>
       </Position22>
       <Position23>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="110" Column="20" TopLine="112"/>
+        <Caret Line="86" Column="13" TopLine="68"/>
       </Position23>
       <Position24>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="75" Column="44" TopLine="59"/>
+        <Caret Line="97" Column="73" TopLine="70"/>
       </Position24>
       <Position25>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="86" Column="13" TopLine="68"/>
+        <Caret Line="86" Column="87" TopLine="75"/>
       </Position25>
       <Position26>
         <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="97" Column="73" TopLine="70"/>
+        <Caret Line="62" Column="17" TopLine="37"/>
       </Position26>
       <Position27>
-        <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="86" Column="87" TopLine="75"/>
-      </Position27>
-      <Position28>
-        <Filename Value="wireangleconfig.pas"/>
-        <Caret Line="62" Column="17" TopLine="37"/>
-      </Position28>
-      <Position29>
         <Filename Value="regularwireconfig.pas"/>
         <Caret Line="117" Column="95" TopLine="95"/>
-      </Position29>
-      <Position30>
+      </Position27>
+      <Position28>
         <Filename Value="wireconfigs.pas"/>
         <Caret Line="16" Column="27" TopLine="1"/>
-      </Position30>
+      </Position28>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
