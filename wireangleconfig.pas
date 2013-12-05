@@ -54,10 +54,10 @@ begin
   v2.y := 0;
   r2 := sqrt(z * z + x * x);
   sin2 := y / sqrt(x * x + y * y + z * z);
-  m2 := 100 / r2 * (1 + sin2);
+  m2 := -100 / r2 * (1 + sin2);
   sinb := z / r2; cosb := x / r2;
-  v2.x := m1 * sinb;
-  v2.z := -m1 * cosb;
+  v2.x := m2 * sinb;
+  v2.z := -m2 * cosb;
 
 
 

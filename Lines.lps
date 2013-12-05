@@ -89,7 +89,7 @@
         <UnitName Value="PerpendicularConfig"/>
         <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="233"/>
+        <TopLine Value="58"/>
         <CursorPos X="34" Y="58"/>
         <UsageCount Value="52"/>
         <Loaded Value="True"/>
@@ -116,10 +116,9 @@
         <Filename Value="irregularwireconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="IrregularWireConfig"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="37"/>
+        <TopLine Value="42"/>
         <CursorPos X="13" Y="37"/>
         <UsageCount Value="40"/>
         <Loaded Value="True"/>
@@ -148,10 +147,11 @@
         <Filename Value="wireangleconfig.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireAngleConfig"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="46"/>
-        <CursorPos X="47" Y="74"/>
+        <TopLine Value="47"/>
+        <CursorPos X="11" Y="60"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit13>
