@@ -5,7 +5,8 @@ unit WireConfigs;
 interface
 
 uses
-  Classes, SysUtils, Forms, GL, wireconfig, threeringsconfig, parallelconfig, perpendicularconfig, wireandcoil, wireangleconfig;
+  Classes, SysUtils, Forms, GL, wireconfig, threeringsconfig, parallelconfig,
+           perpendicularconfig, wireandcoil, wireangleconfig, triangleconfig;
  {$M+}
  type
  TWireConfiguration = TWireConfig;
@@ -14,5 +15,6 @@ uses
  PerpendicularConfiguration = TPerpendicularConfig;
  WireAndCoilConfiguration = TWireAndCoilConfig;
  WireAngleConfiguration = TWireAngleConfig;
+ TriangleConfiguration = TTriangleConfig;
  implementation
  end.

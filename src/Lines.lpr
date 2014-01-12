@@ -9,7 +9,8 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, lazopenglcontext, MainForm, Cameras, wireconfig, WireConfigs,
   ThreeRingsConfig, ParallelConfig, PerpendicularConfig, vector4unit,
-IrregularWireConfig, FormInterface, WireAndCoil, WireAngleConfig
+  IrregularWireConfig, FormInterface, WireAndCoil, WireAngleConfig,
+  TriangleConfig
   { you can add units after this };
 
 {$R *.res}

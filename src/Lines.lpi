@@ -37,7 +37,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="14">
+    <Units Count="15">
       <Unit0>
         <Filename Value="Lines.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -111,6 +111,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="WireAngleConfig"/>
       </Unit13>
+      <Unit14>
+        <Filename Value="triangleconfig.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TriangleConfig"/>
+      </Unit14>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
